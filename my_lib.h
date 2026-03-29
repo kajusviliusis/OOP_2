@@ -16,8 +16,6 @@
 #include <chrono>
 #include <type_traits>
 
-double skaiciuotiGalutiniSuVid(const Studentas& s);
-double skaiciuotiGalutiniSuMed(const Studentas& s);
 void rodytiRezultatus(const std::vector<Studentas>& studentai);
 void generuotiPazymius(Studentas& s);
 void generuotiStudentus(std::vector<Studentas>& studentai);
@@ -71,8 +69,8 @@ void nuskaitytiFaila(Konteineris& studentai, const std::string& failoVardas)
         s.setEgz(s.getNd().back());
         s.pasalintiPaskutiniNd();
 
-        s.setGalVid(skaiciuotiGalutiniSuVid(s));
-        s.setGalMed(skaiciuotiGalutiniSuMed(s));
+        s.setGalVid(s.skaiciuotiGalutiniSuVid());
+        s.setGalMed(s.skaiciuotiGalutiniSuMed());
 
         studentai.push_back(s);
     }

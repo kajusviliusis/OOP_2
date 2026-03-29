@@ -9,25 +9,25 @@
 #include <sstream>
 #include <fstream>
 
-double skaiciuotiGalutiniSuVid(const Studentas& s)
+double Studentas::skaiciuotiGalutiniSuVid() const
 {
-    if (s.nd.empty()) {
+    if (getNd().empty()) {
         throw std::invalid_argument("Negalima skaiciuoti vidurkio, truksta namu darbu ivertinimu");
     }
     double pazSuma = 0;
-    for (int i = 0; i < s.nd.size(); i++) pazSuma += s.nd[i];
-    double vid = pazSuma / double(s.nd.size());
+    for (int paz : getNd()) pazSuma += paz;
+    double vid = pazSuma / double(getNd().size());
 
-    return 0.4 * vid + 0.6 * s.egz;
+    return 0.4 * vid + 0.6 * getEgz();
 }
 
-double skaiciuotiGalutiniSuMed(const Studentas& s)
+double Studentas::skaiciuotiGalutiniSuMed() const
 {
-    if (s.nd.empty()) {
+    if (getNd().empty()) {
         throw std::invalid_argument("Negalima skaiciuoti medianos, truksta namu darbu ivertinimu");
     }
 
-    std::vector<int> kopija = s.nd;
+    std::vector<int> kopija = getNd();
     std::sort(kopija.begin(), kopija.end());
 
     int n = kopija.size();
@@ -35,7 +35,7 @@ double skaiciuotiGalutiniSuMed(const Studentas& s)
     if (n % 2 == 0) med = (kopija[n / 2 - 1] + kopija[n / 2]) / 2.0;
     else med = kopija[n / 2];
 
-    return 0.4 * med + 0.6 * s.egz;
+    return 0.4 * med + 0.6 * getEgz();
 }
 
 void rodytiRezultatus(const std::vector<Studentas>& studentai)
@@ -65,12 +65,12 @@ void rodytiRezultatus(const std::vector<Studentas>& studentai)
         double galutinisBalas;
 
         if (skaiciavimas == 'v')
-            galutinisBalas = skaiciuotiGalutiniSuVid(s);
+            galutinisBalas = s.skaiciuotiGalutiniSuVid();
         else
-            galutinisBalas = skaiciuotiGalutiniSuMed(s);
+            galutinisBalas = s.skaiciuotiGalutiniSuMed();
 
-        std::cout << std::setw(10) << s.vardas
-                  << std::setw(15) << s.pavarde
+        std::cout << std::setw(10) << s.getVardas()
+                  << std::setw(15) << s.getPavarde()
                   << std::fixed << std::setprecision(2)
                   << galutinisBalas << "\n";
     }
@@ -79,12 +79,13 @@ void rodytiRezultatus(const std::vector<Studentas>& studentai)
 void generuotiPazymius(Studentas& s)
 {
     int kiekis = 5;
-    s.nd.clear();
+
+    s.isvalytiNd();
 
     for (int i = 0; i < kiekis; i++)
-        s.nd.push_back(rand() % 10 + 1);
+        s.pridetiNd(rand() % 10 + 1);
 
-    s.egz = rand() % 10 + 1;
+    s.setEgz(rand() % 10 + 1);
 }
 
 void generuotiStudentus(std::vector<Studentas>& studentai)
@@ -97,8 +98,8 @@ void generuotiStudentus(std::vector<Studentas>& studentai)
     for (int i = 0; i < studentuKiekis; i++)
     {
         Studentas s;
-        s.vardas = vardai[rand() % vardai.size()];
-        s.pavarde = pavardes[rand() % pavardes.size()];
+        s.setVardas(vardai[rand() % vardai.size()]);
+        s.setPavarde(pavardes[rand() % pavardes.size()]);
         generuotiPazymius(s);
         studentai.push_back(s);
     }
@@ -111,9 +112,9 @@ void rodytiRez(const std::vector<Studentas>& studentai)
         << "Galutinis (Vid.)" << std::setw(20) << "Galutinis (Med.)" << std::endl;
 
     for (const Studentas& s : studentai) {
-        buffer << std::left << std::setw(20) << s.vardas << std::setw(20) << s.pavarde << std::setw(20)
-               << std::fixed << std::setprecision(2) << skaiciuotiGalutiniSuVid(s)
-               << std::setw(20) << std::fixed << std::setprecision(2) << skaiciuotiGalutiniSuMed(s)
+        buffer << std::left << std::setw(20) << s.getVardas() << std::setw(20) << s.getPavarde() << std::setw(20)
+               << std::fixed << std::setprecision(2) << s.skaiciuotiGalutiniSuVid()
+               << std::setw(20) << std::fixed << std::setprecision(2) << s.skaiciuotiGalutiniSuMed()
                << std::endl;
     }
 
@@ -138,16 +139,16 @@ void rodytiRez(const std::vector<Studentas>& studentai)
 }
 
 bool rikiuotiVarda(const Studentas& A, const Studentas& B) {
-    return A.vardas < B.vardas;
+    return A.getVardas() < B.getVardas();
 }
 bool rikiuotiPavarde(const Studentas& A, const Studentas& B) {
-    return A.pavarde < B.pavarde;
+    return A.getPavarde() < B.getPavarde();
 }
 bool rikiuotiPagalGalutiniVid(const Studentas& A, const Studentas& B) {
-    return A.galVid < B.galVid;
+    return A.getGalVid() < B.getGalVid();
 }
 bool rikiuotiPagalGalutiniMed(const Studentas& A, const Studentas& B) {
-    return A.galMed < B.galMed;
+    return A.getGalMed() < B.getGalMed();
 }
 
 void nuskaitytiFailaTestavimui(std::vector<Studentas>& studentai, int kartai)
@@ -185,25 +186,28 @@ void nuskaitytiFailaTestavimui(std::vector<Studentas>& studentai, int kartai)
                 std::stringstream ss(eilute);
 
                 Studentas s;
-                if (!(ss >> s.vardas >> s.pavarde)) {
+                std::string vardas, pavarde;
+                if (!(ss >> vardas >> pavarde)) {
                     throw std::runtime_error("Blogas formatas eiluteje " + eilute);
                 }
+                s.setVardas(vardas);
+                s.setPavarde(pavarde);
 
                 int pazymys;
                 while(ss >> pazymys)
                 {
-                    s.nd.push_back(pazymys);
+                    s.pridetiNd(pazymys);
                 }
 
-                if (s.nd.empty()) {
+                if (s.getNd().empty()) {
                     throw std::runtime_error("Truksta pazymiu eiluteje " + eilute);
                 }
 
-                s.egz = s.nd.back();
-                s.nd.pop_back();
+                s.setEgz(s.getNd().back());
+                s.pasalintiPaskutiniNd();
 
-                s.galVid = skaiciuotiGalutiniSuVid(s);
-                s.galMed = skaiciuotiGalutiniSuMed(s);
+                s.setGalVid(s.skaiciuotiGalutiniSuVid());
+                s.setGalMed(s.skaiciuotiGalutiniSuMed());
 
                 studentai.push_back(s);
             }
@@ -250,12 +254,12 @@ void isvestiDuFailus(const std::vector<Studentas>& vargsai, const std::vector<St
 
     failasVargsai << std::left << std::setw(20) << "Vardas" << std::setw(20) << "Pavardė" << std::setw(20) << "Galutinis (Vid.)" << std::setw(20) << "Galutinis (Med.)" << '\n';
     for (const Studentas& s : vargsai) {
-        failasVargsai << std::left << std::setw(20) << s.vardas << std::setw(20) << s.pavarde << std::setw(20) << std::fixed << std::setprecision(2) << s.galVid << std::setw(20) << std::fixed << std::setprecision(2) << s.galMed << '\n';
+        failasVargsai << std::left << std::setw(20) << s.getVardas() << std::setw(20) << s.getPavarde() << std::setw(20) << std::fixed << std::setprecision(2) << s.getGalVid() << std::setw(20) << std::fixed << std::setprecision(2) << s.getGalMed() << '\n';
     }
 
     failasKieti << std::left << std::setw(20) << "Vardas" << std::setw(20) << "Pavardė" << std::setw(20) << "Galutinis (Vid.)" << std::setw(20) << "Galutinis (Med.)" << '\n';
     for (const Studentas& s : kieti) {
-        failasKieti << std::left << std::setw(20) << s.vardas << std::setw(20) << s.pavarde << std::setw(20) << std::fixed << std::setprecision(2) << s.galVid << std::setw(20) << std::fixed << std::setprecision(2) << s.galMed << '\n';
+        failasKieti << std::left << std::setw(20) << s.getVardas() << std::setw(20) << s.getPavarde() << std::setw(20) << std::fixed << std::setprecision(2) << s.getGalVid() << std::setw(20) << std::fixed << std::setprecision(2) << s.getGalMed() << '\n';
     }
 
     failasVargsai.close();
