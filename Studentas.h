@@ -34,6 +34,7 @@ public:
     void setGalMed(double v) { galMed_ = v; }
 
     void pridetiNd(int pazymys) { nd_.push_back(pazymys); }
+    void isvalytiNd() { nd_.clear(); }
     void pasalintiPaskutiniNd() {
         if (nd_.empty()) throw std::runtime_error("Truksta pazymiu eiluteje");
         nd_.pop_back();
