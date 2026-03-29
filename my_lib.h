@@ -1,6 +1,8 @@
 #ifndef MYLIB_H
 #define MYLIB_H
 
+#include "Studentas.h"
+
 #include <string>
 #include <vector>
 #include <deque>
@@ -13,16 +15,6 @@
 #include <iomanip>
 #include <chrono>
 #include <type_traits>
-
-struct Studentas {
-    std::string vardas;
-    std::string pavarde;
-    int egz;
-    std::vector<int> nd;
-
-    double galVid;
-    double galMed;
-};
 
 double skaiciuotiGalutiniSuVid(const Studentas& s);
 double skaiciuotiGalutiniSuMed(const Studentas& s);
@@ -60,24 +52,27 @@ void nuskaitytiFaila(Konteineris& studentai, const std::string& failoVardas)
         std::stringstream ss(eilute);
 
         Studentas s;
-        if (!(ss >> s.vardas >> s.pavarde)) {
+        std::string vardas, pavarde;
+        if (!(ss >> vardas >> pavarde)) {
             throw std::runtime_error("Blogas formatas eiluteje " + eilute);
         }
+        s.setVardas(vardas);
+        s.setPavarde(pavarde);
 
         int pazymys;
         while (ss >> pazymys) {
-            s.nd.push_back(pazymys);
+            s.pridetiNd(pazymys);
         }
 
-        if (s.nd.empty()) {
+        if (s.getNd().empty()) {
             throw std::runtime_error("Truksta pazymiu eiluteje " + eilute);
         }
 
-        s.egz = s.nd.back();
-        s.nd.pop_back();
+        s.setEgz(s.getNd().back());
+        s.pasalintiPaskutiniNd();
 
-        s.galVid = skaiciuotiGalutiniSuVid(s);
-        s.galMed = skaiciuotiGalutiniSuMed(s);
+        s.setGalVid(skaiciuotiGalutiniSuVid(s));
+        s.setGalMed(skaiciuotiGalutiniSuMed(s));
 
         studentai.push_back(s);
     }
@@ -112,7 +107,7 @@ void paskirstytiStudentus(const Konteineris& studentai, Konteineris& vargsai,
             Konteineris& kieti) {
 
     for (const auto& s : studentai) {
-        if (s.galVid >= 5.0) {
+        if (s.getGalVid() >= 5.0) {
             kieti.push_back(s);
         } else {
             vargsai.push_back(s);
@@ -130,18 +125,18 @@ void paskirstytiStudentusS2(Konteineris& studentai, Konteineris& vargsai)
     if constexpr (std::is_same_v<Konteineris, std::list<Studentas>>)
     {
         studentai.sort([](const Studentas& a, const Studentas& b) {
-            return a.galVid > b.galVid;
+            return a.getGalVid() > b.getGalVid();
         });
     }
     else
     {
         std::sort(studentai.begin(), studentai.end(),
                   [](const Studentas& a, const Studentas& b) {
-                      return a.galVid > b.galVid;
+                      return a.getGalVid() > b.getGalVid();
                   });
     }
 
-    while (!studentai.empty() && studentai.back().galVid < 5.0)
+    while (!studentai.empty() && studentai.back().getGalVid() < 5.0)
     {
         vargsai.push_back(studentai.back());
         studentai.pop_back();
@@ -159,7 +154,7 @@ void paskirstytiStudentusS3(Konteineris& studentai, Konteineris& vargsai)
     // std::partition pertvarko konteineri taip kad visi elementai kurie tenkina salyga butu pradzioje, o kiti gale.
     // Grazina iterator i pirmo elemento po true grupes pradzia
     auto mid = std::partition(studentai.begin(), studentai.end(),
-                              [](const Studentas& s) { return s.galVid < 5.0; });
+                              [](const Studentas& s) { return s.getGalVid()< 5.0; });
 
     for (auto it = studentai.begin(); it != mid; ++it) {
         vargsai.push_back(*it);
