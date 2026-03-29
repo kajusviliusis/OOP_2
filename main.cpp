@@ -46,15 +46,23 @@ int main()
             Studentas s;
 
             std::cout << "Įveskite studento vardą (0 - baigti)" << std::endl;
-            std::cin >> s.vardas;
-            if(s.vardas=="0") break;
+            std::string vardas;
+            std::cin >> vardas;
+            s.setVardas(vardas);
+            if(s.getVardas()=="0") break;
 
             std::cout << "Įveskite studento pavardę" << std::endl;
-            std::cin >> s.pavarde;
+            std::string pavarde;
+            std::cin >> pavarde;
+            s.setPavarde(pavarde);
             while(true)
             {
               std::cout << "Įveskite egzamino rezultatą (1-10)" << std::endl;
-              if(std::cin >> s.egz && s.egz >=1 && s.egz <= 10) break;
+              int egz;
+              if(std::cin >> egz && egz >=1 && egz <= 10) {
+                s.setEgz(egz);
+                break;
+              }
 
               std::cout << "Klaida, bandykite dar kartą" << std::endl;
               std::cin.clear();
@@ -77,7 +85,7 @@ int main()
                 std::cin >> pazymys;
               }
 
-              s.nd.push_back(pazymys);
+              s.pridetiNd(pazymys);
             }
 
             studentai.push_back(s);
@@ -91,11 +99,15 @@ int main()
           while(true){
             Studentas s;
             std::cout << "Įveskite studento vardą (0 - baigti)" << std::endl;
-            std::cin >> s.vardas;
-            if(s.vardas=="0") break;
+            std::string vardas;
+            std::cin >> vardas;
+            s.setVardas(vardas);
+            if(s.getVardas()=="0") break;
 
             std::cout << "Įveskite studento pavardę" << std::endl;
-            std::cin >> s.pavarde;
+            std::string pavarde;
+            std::cin >> pavarde;
+            s.setPavarde(pavarde);
 
             generuotiPazymius(s);
 
