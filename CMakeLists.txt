@@ -7,4 +7,5 @@ include_directories(.)
 add_executable(OOP_1
         main.cpp
         my_lib.cpp
-        my_lib.h)
+        my_lib.h
+        Studentas.h)
