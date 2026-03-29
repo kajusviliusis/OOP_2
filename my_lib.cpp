@@ -9,19 +9,19 @@
 #include <sstream>
 #include <fstream>
 
-double vidurkis(const Studentas& s)
+double skaiciuotiGalutiniSuVid(const Studentas& s)
 {
     if (s.nd.empty()) {
         throw std::invalid_argument("Negalima skaiciuoti vidurkio, truksta namu darbu ivertinimu");
     }
     double pazSuma = 0;
-    for (int i = 0; i < s.nd.size(); i++)
-        pazSuma += s.nd[i];
+    for (int i = 0; i < s.nd.size(); i++) pazSuma += s.nd[i];
+    double vid = pazSuma / double(s.nd.size());
 
-    return pazSuma / double(s.nd.size());
+    return 0.4 * vid + 0.6 * s.egz;
 }
 
-double mediana(const Studentas& s)
+double skaiciuotiGalutiniSuMed(const Studentas& s)
 {
     if (s.nd.empty()) {
         throw std::invalid_argument("Negalima skaiciuoti medianos, truksta namu darbu ivertinimu");
@@ -30,15 +30,12 @@ double mediana(const Studentas& s)
     std::vector<int> kopija = s.nd;
     std::sort(kopija.begin(), kopija.end());
 
-    if (kopija.size() % 2 == 0)
-        return (kopija[kopija.size()/2 - 1] + kopija[kopija.size()/2]) / 2.0;
-    else
-        return kopija[kopija.size()/2];
-}
+    int n = kopija.size();
+    double med;
+    if (n % 2 == 0) med = (kopija[n / 2 - 1] + kopija[n / 2]) / 2.0;
+    else med = kopija[n / 2];
 
-double galutinis(const Studentas& A, double medVid)
-{
-    return 0.4 * medVid + 0.6 * A.egz;
+    return 0.4 * med + 0.6 * s.egz;
 }
 
 void rodytiRezultatus(const std::vector<Studentas>& studentai)
@@ -68,9 +65,9 @@ void rodytiRezultatus(const std::vector<Studentas>& studentai)
         double galutinisBalas;
 
         if (skaiciavimas == 'v')
-            galutinisBalas = galutinis(s, vidurkis(s));
+            galutinisBalas = skaiciuotiGalutiniSuVid(s);
         else
-            galutinisBalas = galutinis(s, mediana(s));
+            galutinisBalas = skaiciuotiGalutiniSuMed(s);
 
         std::cout << std::setw(10) << s.vardas
                   << std::setw(15) << s.pavarde
@@ -114,7 +111,10 @@ void rodytiRez(const std::vector<Studentas>& studentai)
         << "Galutinis (Vid.)" << std::setw(20) << "Galutinis (Med.)" << std::endl;
 
     for (const Studentas& s : studentai) {
-        buffer << std::left << std::setw(20) << s.vardas << std::setw(20) << s.pavarde << std::setw(20) << std::fixed << std::setprecision(2) << galutinis(s, vidurkis(s)) << std::setw(20) << std::fixed << std::setprecision(2) << galutinis(s, mediana(s)) << std::endl;
+        buffer << std::left << std::setw(20) << s.vardas << std::setw(20) << s.pavarde << std::setw(20)
+               << std::fixed << std::setprecision(2) << skaiciuotiGalutiniSuVid(s)
+               << std::setw(20) << std::fixed << std::setprecision(2) << skaiciuotiGalutiniSuMed(s)
+               << std::endl;
     }
 
     int pasirinkimas;
@@ -202,8 +202,8 @@ void nuskaitytiFailaTestavimui(std::vector<Studentas>& studentai, int kartai)
                 s.egz = s.nd.back();
                 s.nd.pop_back();
 
-                s.galVid = galutinis(s, vidurkis(s));
-                s.galMed = galutinis(s, mediana(s));
+                s.galVid = skaiciuotiGalutiniSuVid(s);
+                s.galMed = skaiciuotiGalutiniSuMed(s);
 
                 studentai.push_back(s);
             }

@@ -12,6 +12,7 @@
 #include <iostream>
 #include <iomanip>
 #include <chrono>
+#include <type_traits>
 
 struct Studentas {
     std::string vardas;
@@ -23,9 +24,8 @@ struct Studentas {
     double galMed;
 };
 
-double vidurkis(const Studentas& s);
-double mediana(const Studentas& s);
-double galutinis(const Studentas& A, double medVid);
+double skaiciuotiGalutiniSuVid(const Studentas& s);
+double skaiciuotiGalutiniSuMed(const Studentas& s);
 void rodytiRezultatus(const std::vector<Studentas>& studentai);
 void generuotiPazymius(Studentas& s);
 void generuotiStudentus(std::vector<Studentas>& studentai);
@@ -76,8 +76,8 @@ void nuskaitytiFaila(Konteineris& studentai, const std::string& failoVardas)
         s.egz = s.nd.back();
         s.nd.pop_back();
 
-        s.galVid = galutinis(s, vidurkis(s));
-        s.galMed = galutinis(s, mediana(s));
+        s.galVid = skaiciuotiGalutiniSuVid(s);
+        s.galMed = skaiciuotiGalutiniSuMed(s);
 
         studentai.push_back(s);
     }
