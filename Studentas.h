@@ -18,7 +18,7 @@ public:
     Studentas() : egz_(0), galVid_(0.0), galMed_(0.0) {}
     Studentas(const std::string& vardas, const std::string& pavarde)
        : vardas_(vardas), pavarde_(pavarde), egz_(0), galVid_(0.0), galMed_(0.0) {}
-    ~Studentas() {}
+    ~Studentas() {nd_.clear();}
 
     const std::string& getVardas() const { return vardas_; }
     const std::string& getPavarde() const { return pavarde_; }
