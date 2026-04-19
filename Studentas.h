@@ -31,7 +31,21 @@ public:
     egz_(s.egz_), nd_(std::move(s.nd_)),
     galVid_(s.galVid_), galMed_(s.galMed_) {}
 
+    // destruktorius
     ~Studentas() {nd_.clear();}
+
+    // copy assignment operator
+    Studentas& operator=(const Studentas& s) {
+        if (this == &s) return *this;
+        vardas_ = s.vardas_;
+        pavarde_ = s.pavarde_;
+        egz_ = s.egz_;
+        nd_ = s.nd_;
+        galVid_ = s.galVid_;
+        galMed_ = s.galMed_;
+
+        return *this;
+    }
 
     const std::string& getVardas() const { return vardas_; }
     const std::string& getPavarde() const { return pavarde_; }
