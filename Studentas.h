@@ -18,6 +18,14 @@ public:
     Studentas() : egz_(0), galVid_(0.0), galMed_(0.0) {}
     Studentas(const std::string& vardas, const std::string& pavarde)
        : vardas_(vardas), pavarde_(pavarde), egz_(0), galVid_(0.0), galMed_(0.0) {}
+
+    // copy konstruktorius
+    Studentas(const Studentas& s)
+        : vardas_(s.vardas_), pavarde_(s.pavarde_),
+    egz_(s.egz_), nd_(s.nd_),
+    galVid_(s.galVid_), galMed_(s.galMed_) {}
+
+
     ~Studentas() {nd_.clear();}
 
     const std::string& getVardas() const { return vardas_; }
