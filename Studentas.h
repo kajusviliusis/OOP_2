@@ -4,6 +4,8 @@
 #include <stdexcept>
 #include <string>
 #include <vector>
+#include <iostream>
+#include <sstream>
 
 class Studentas {
 private:
@@ -60,6 +62,41 @@ public:
         return *this;
     }
 
+    // output operatorius
+    friend std::ostream& operator<<(std::ostream& out, const Studentas& s) {
+        out << s.vardas_ << ' ' << s.pavarde_;
+        for (int nd : s.nd_) out << ' ' << nd;
+        out << ' ' << s.egz_;
+        return out;
+    }
+
+    // input operatorius
+    friend std::istream& operator>>(std::istream& in, Studentas& s) {
+    std::string eilute;
+    std::getline(in, eilute);
+    if (!in) return in;
+
+    std::stringstream ss(eilute);
+
+    if (!(ss >> s.vardas_ >> s.pavarde_)) {
+        throw std::runtime_error("Blogas studento formatas: truksta vardo/pavardes");
+    }
+
+    s.nd_.clear();
+    int paz;
+    while (ss >> paz) s.nd_.push_back(paz);
+
+    if (s.nd_.empty()) {
+        throw std::runtime_error("Blogas studento formatas: truksta pazymiu");
+    }
+
+    s.egz_ = s.nd_.back();
+    s.nd_.pop_back();
+
+    s.galVid_ = s.skaiciuotiGalutiniSuVid();
+    s.galMed_ = s.skaiciuotiGalutiniSuMed();
+    return in;
+}
 
     const std::string& getVardas() const { return vardas_; }
     const std::string& getPavarde() const { return pavarde_; }
