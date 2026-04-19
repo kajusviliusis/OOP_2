@@ -54,3 +54,5 @@ Sioje versijoje klase `Studentas` papildyta pilnai realizuotais rule of five met
 | Isvesties operatorius       | `operator<<(std::ostream&, const Studentas&)` | Isveda `Vardas Pavarde ND... Egz` (patogu spausdinimui ir testams)          |
 
 Visi metodai, operatoriai atliekus testavima veikia teisingai:
+
+<img width="565" height="252" alt="image" src="https://github.com/user-attachments/assets/61c50a74-307b-4a2e-a51f-06d304c95645" />
