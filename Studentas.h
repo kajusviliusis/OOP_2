@@ -25,6 +25,11 @@ public:
     egz_(s.egz_), nd_(s.nd_),
     galVid_(s.galVid_), galMed_(s.galMed_) {}
 
+    // move konstruktorius
+    Studentas(Studentas&& s) // && - rvalue nuoroda, std::move pavercia i rvalue
+        : vardas_(std::move(s.vardas_)), pavarde_(std::move(s.pavarde_)),
+    egz_(s.egz_), nd_(std::move(s.nd_)),
+    galVid_(s.galVid_), galMed_(s.galMed_) {}
 
     ~Studentas() {nd_.clear();}
 
