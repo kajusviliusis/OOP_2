@@ -1,0 +1,157 @@
+#include "Studentas.h"
+
+#include <cassert>
+#include <exception>
+#include <iostream>
+#include <sstream>
+#include <string>
+
+bool studentaiVienodi(const Studentas& a, const Studentas& b)
+{
+    return a.getVardas() == b.getVardas()
+        && a.getPavarde() == b.getPavarde()
+        && a.getEgz() == b.getEgz()
+        && a.getNd() == b.getNd();
+}
+
+void testDefaultConstructor()
+{
+    Studentas s;
+
+    assert(s.getVardas().empty());
+    assert(s.getPavarde().empty());
+    assert(s.getEgz() == 0);
+    assert(s.getNd().empty());
+
+    std::cout << "Default konstruktorius praejo.\n";
+}
+
+void testCopyConstructor()
+{
+    Studentas originalus;
+    originalus.setVardas("Jonas");
+    originalus.setPavarde("Jonaitis");
+    originalus.setEgz(7);
+    originalus.pridetiNd(8);
+    originalus.pridetiNd(9);
+
+    Studentas kopija(originalus);
+
+    assert(studentaiVienodi(kopija, originalus));
+
+    std::cout << "Copy konstruktorius praejo.\n";
+}
+
+void testMoveConstructor()
+{
+    Studentas originalus;
+    originalus.setVardas("Jonas");
+    originalus.setPavarde("Jonaitis");
+    originalus.setEgz(7);
+    originalus.pridetiNd(8);
+    originalus.pridetiNd(9);
+
+    Studentas perkeltas(std::move(originalus));
+
+    assert(perkeltas.getVardas() == "Jonas");
+    assert(perkeltas.getPavarde() == "Jonaitis");
+    assert(perkeltas.getEgz() == 7);
+    assert(perkeltas.getNd().size() == 2);
+    assert(perkeltas.getNd()[0] == 8);
+    assert(perkeltas.getNd()[1] == 9);
+
+    std::cout << "Move konstruktorius praejo.\n";
+}
+
+void testCopyAssignment()
+{
+    Studentas originalus;
+    originalus.setVardas("Petras");
+    originalus.setPavarde("Petraitis");
+    originalus.setEgz(10);
+    originalus.pridetiNd(6);
+    originalus.pridetiNd(7);
+
+    Studentas kopija;
+    kopija = originalus;
+
+    assert(studentaiVienodi(kopija, originalus));
+
+    std::cout << "Copy assignment operatorius praejo.\n";
+}
+
+void testMoveAssignment()
+{
+    Studentas originalus;
+    originalus.setVardas("Tomas");
+    originalus.setPavarde("Tomaitis");
+    originalus.setEgz(9);
+    originalus.pridetiNd(10);
+    originalus.pridetiNd(10);
+
+    Studentas perkeltas;
+    perkeltas = std::move(originalus);
+
+    assert(perkeltas.getVardas() == "Tomas");
+    assert(perkeltas.getPavarde() == "Tomaitis");
+    assert(perkeltas.getEgz() == 9);
+    assert(perkeltas.getNd().size() == 2);
+    assert(perkeltas.getNd()[0] == 10);
+    assert(perkeltas.getNd()[1] == 10);
+
+    std::cout << "Perkelimo priskyrimo operatorius praejo.\n";
+}
+
+void testInputOutputOperators()
+{
+    std::stringstream ivestis("Tomas Tomaitis 10 9 8 7\n");
+    Studentas s;
+
+    ivestis >> s;
+
+    assert(s.getVardas() == "Tomas");
+    assert(s.getPavarde() == "Tomaitis");
+    assert(s.getEgz() == 7);
+    assert(s.getNd().size() == 3);
+    assert(s.getNd()[0] == 10);
+    assert(s.getNd()[1] == 9);
+    assert(s.getNd()[2] == 8);
+
+    std::stringstream isvestis;
+    isvestis << s;
+
+    assert(isvestis.str() == "Tomas Tomaitis 10 9 8 7");
+
+    std::cout << "I/O operatoriai praejo.\n";
+}
+
+void testDestructor()
+{
+    for (int i = 0; i < 1000; ++i) {
+        Studentas laikinas;
+        laikinas.setVardas("A");
+        laikinas.setPavarde("B");
+        laikinas.setEgz(1);
+        laikinas.pridetiNd(1);
+    }
+
+    std::cout << "Destruktoriaus netiesioginis testas praejo.\n";
+}
+
+int main()
+{
+    try {
+        testDefaultConstructor();
+        testCopyConstructor();
+        testMoveConstructor();
+        testCopyAssignment();
+        testMoveAssignment();
+        testInputOutputOperators();
+        testDestructor();
+
+        std::cout << "\nVisi testai atlikti sekmingai.\n";
+    }
+    catch (const std::exception& e) {
+        std::cerr << "Testuose ivyko klaida: " << e.what() << '\n';
+    }
+}

@@ -9,3 +9,9 @@ add_executable(OOP_1
         my_lib.cpp
         my_lib.h
         Studentas.h)
+
+add_executable(testai
+        testai.cpp
+        my_lib.cpp
+        my_lib.h
+        Studentas.h)
