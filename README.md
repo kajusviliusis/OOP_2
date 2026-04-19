@@ -36,3 +36,21 @@ cmake --build .
 ```
 ./testai
 ```
+
+## v1.2
+
+Sioje versijoje klase `Studentas` papildyta pilnai realizuotais rule of five metodais ir perdengtais ivesties/isvesties operatoriais.
+
+### Realizuoti metodai ir operatoriai
+
+| Funkcionalumas              | Realizacija | Kada naudojama                                                              |
+|-----------------------------|---|-----------------------------------------------------------------------------|
+| Copy konstruktorius         | `Studentas(const Studentas& s)` | Kai sukuriama objekto kopija (pvz. kopijuojant i konteinerius)              |
+| Copy assignment operatorius | `Studentas& operator=(const Studentas& s)` | Kai vykdomas priskyrimas `a = b`                                            |
+| Move konstruktorius         | `Studentas(Studentas&& s)` | Kai objektas perkeliamas is laikino (pvz. su `std::move`)                   |
+| Move assignment operatorius | `Studentas& operator=(Studentas&& s)` | Kai vykdomas `a = std::move(b)`                                             |
+| Destruktorius               | `~Studentas()` | Automatiskai kvieciamas iseinant is scope                                   |
+| Ivesties operatorius        | `operator>>(std::istream&, Studentas&)` | Skaito eilute formatu `Vardas Pavarde ND... Egz` (tinka failams ir testams) |
+| Isvesties operatorius       | `operator<<(std::ostream&, const Studentas&)` | Isveda `Vardas Pavarde ND... Egz` (patogu spausdinimui ir testams)          |
+
+Visi metodai, operatoriai atliekus testavima veikia teisingai:
