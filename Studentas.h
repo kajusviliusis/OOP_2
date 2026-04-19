@@ -34,7 +34,7 @@ public:
     // destruktorius
     ~Studentas() {nd_.clear();}
 
-    // copy assignment operator
+    // copy assignment operatorius
     Studentas& operator=(const Studentas& s) {
         if (this == &s) return *this;
         vardas_ = s.vardas_;
@@ -46,6 +46,20 @@ public:
 
         return *this;
     }
+
+    // move assignment operatorius
+    Studentas& operator=(Studentas&& s) {
+        if (this == &s) return *this;
+        vardas_ = std::move(s.vardas_);
+        pavarde_ = std::move(s.pavarde_);
+        egz_ = s.egz_;
+        nd_ = std::move(s.nd_);
+        galVid_ = s.galVid_;
+        galMed_ = s.galMed_;
+
+        return *this;
+    }
+
 
     const std::string& getVardas() const { return vardas_; }
     const std::string& getPavarde() const { return pavarde_; }
