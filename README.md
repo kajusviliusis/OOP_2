@@ -40,7 +40,7 @@ cmake --build .
 ## v1.5
 
 Sioje versijoje prideta bazine (abstrakti) klase `Zmogus` ir is jos isvestine (derived) klase `Studentas`.
-Programa islieka veiksni ir naudoja ta pacia v1.2 logika, tik `Studentas` dabar paveldi bendra informacija apie zmogu (varda ir pavarde).
+Programa naudoja ta pacia v1.2 logika, tik `Studentas` dabar paveldi bendra informacija apie zmogu (varda ir pavarde).
 
 ### Klasiu struktura
 
@@ -49,7 +49,8 @@ Programa islieka veiksni ir naudoja ta pacia v1.2 logika, tik `Studentas` dabar 
 | `Zmogus` | Abstrakti bazine | Saugo bendra informacija apie zmogu (`vardas_`, `pavarde_`) | Negalima sukurti `Zmogus` objektu, nes turi `virtual std::string tipas() const = 0;` |
 | `Studentas` | Isvestine is `Zmogus` | Saugo studento pazymius ir skaiciavimus | Igyvendina `tipas()` ir palaiko v1.2 rule of five |
 
-Bandant sukurti objekta:
+Bandant sukurti Zmogaus objekta:
+<img width="1583" height="303" alt="image" src="https://github.com/user-attachments/assets/4056d6af-b2b6-4256-b4e5-825ba84253fe" />
 
 
 ### Realizuoti metodai ir operatoriai
