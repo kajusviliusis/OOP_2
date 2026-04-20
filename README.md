@@ -37,9 +37,20 @@ cmake --build .
 ./testai
 ```
 
-## v1.2
+## v1.5
 
-Sioje versijoje klase `Studentas` papildyta pilnai realizuotais rule of five metodais ir perdengtais ivesties/isvesties operatoriais.
+Sioje versijoje prideta bazine (abstrakti) klase `Zmogus` ir is jos isvestine (derived) klase `Studentas`.
+Programa islieka veiksni ir naudoja ta pacia v1.2 logika, tik `Studentas` dabar paveldi bendra informacija apie zmogu (varda ir pavarde).
+
+### Klasiu struktura
+
+| Klase | Tipas | Paskirtis | Pastabos |
+|------|------|----------|---------|
+| `Zmogus` | Abstrakti bazine | Saugo bendra informacija apie zmogu (`vardas_`, `pavarde_`) | Negalima sukurti `Zmogus` objektu, nes turi `virtual std::string tipas() const = 0;` |
+| `Studentas` | Isvestine is `Zmogus` | Saugo studento pazymius ir skaiciavimus | Igyvendina `tipas()` ir palaiko v1.2 rule of five |
+
+Bandant sukurti objekta:
+
 
 ### Realizuoti metodai ir operatoriai
 
@@ -53,6 +64,6 @@ Sioje versijoje klase `Studentas` papildyta pilnai realizuotais rule of five met
 | Ivesties operatorius        | `operator>>(std::istream&, Studentas&)` | Skaito eilute formatu `Vardas Pavarde ND... Egz` (tinka failams ir testams) |
 | Isvesties operatorius       | `operator<<(std::ostream&, const Studentas&)` | Isveda `Vardas Pavarde ND... Egz` (patogu spausdinimui ir testams)          |
 
-Visi metodai, operatoriai atliekus testavima veikia teisingai:
+Visi metodai, operatoriai atliekus testavima vis dar veikia teisingai:
 
 <img width="565" height="252" alt="image" src="https://github.com/user-attachments/assets/61c50a74-307b-4a2e-a51f-06d304c95645" />
