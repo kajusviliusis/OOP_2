@@ -8,10 +8,12 @@ add_executable(OOP_1
         main.cpp
         my_lib.cpp
         my_lib.h
-        Studentas.h)
+        Studentas.h
+        Zmogus.h)
 
 add_executable(testai
         testai.cpp
         my_lib.cpp
         my_lib.h
-        Studentas.h)
+        Studentas.h
+        Zmogus.h)
