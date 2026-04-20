@@ -5,6 +5,9 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include <type_traits>
+
+static_assert(std::is_abstract<Zmogus>::value, "Zmogus turi buti abstrakti klase");
 
 bool studentaiVienodi(const Studentas& a, const Studentas& b)
 {
@@ -140,6 +143,12 @@ void testDestructor()
 
 int main()
 {
+
+    //Zmogus zmogus("Vardas", "Pavarde");
+    //error: cannot declare variable ‘zmogus’ to be of abstract type ‘Zmogus’
+    //note: because the following virtual functions are pure within ‘Zmogus’:
+    //note: ‘virtual std::string Zmogus::tipas() const’
+
     try {
         testDefaultConstructor();
         testCopyConstructor();

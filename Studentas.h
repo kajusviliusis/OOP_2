@@ -34,7 +34,7 @@ public:
     galVid_(s.galVid_), galMed_(s.galMed_) {}
 
     // destruktorius
-    ~Studentas() {nd_.clear();}
+    ~Studentas() override {nd_.clear();}
 
     // copy assignment operatorius
     Studentas& operator=(const Studentas& s) {
