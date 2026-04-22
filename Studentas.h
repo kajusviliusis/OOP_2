@@ -19,8 +19,8 @@ private:
 public:
     Studentas() : vardas_(""), pavarde_(""), egz_(0), nd_{}, galVid_(0.0), galMed_(0.0) {}
 
-    Studentas(const std::string& vardas, const std::string& pavarde)
-       : vardas_(vardas), pavarde_(pavarde), egz_(0), galVid_(0.0), galMed_(0.0) {}
+    Studentas(const std::string& vardas, const std::string& pavarde, int egz, const std::vector<int>& nd)
+       : vardas_(vardas), pavarde_(pavarde), egz_(egz), nd_{nd}, galVid_(0.0), galMed_(0.0) {}
 
     // copy konstruktorius
     Studentas(const Studentas& s)

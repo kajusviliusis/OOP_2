@@ -28,12 +28,7 @@ void testDefaultConstructor()
 
 void testCopyConstructor()
 {
-    Studentas originalus;
-    originalus.setVardas("Jonas");
-    originalus.setPavarde("Jonaitis");
-    originalus.setEgz(7);
-    originalus.pridetiNd(8);
-    originalus.pridetiNd(9);
+    Studentas originalus("Jonas", "Jonaitis", 7, {8, 9});
 
     Studentas kopija(originalus);
 
@@ -44,12 +39,7 @@ void testCopyConstructor()
 
 void testMoveConstructor()
 {
-    Studentas originalus;
-    originalus.setVardas("Jonas");
-    originalus.setPavarde("Jonaitis");
-    originalus.setEgz(7);
-    originalus.pridetiNd(8);
-    originalus.pridetiNd(9);
+    Studentas originalus("Jonas", "Jonaitis", 7, {8, 9});
 
     Studentas perkeltas(std::move(originalus));
 
@@ -65,12 +55,7 @@ void testMoveConstructor()
 
 void testCopyAssignment()
 {
-    Studentas originalus;
-    originalus.setVardas("Petras");
-    originalus.setPavarde("Petraitis");
-    originalus.setEgz(10);
-    originalus.pridetiNd(6);
-    originalus.pridetiNd(7);
+    Studentas originalus("Jonas", "Jonaitis", 7, {8, 9});
 
     Studentas kopija;
     kopija = originalus;
@@ -82,12 +67,7 @@ void testCopyAssignment()
 
 void testMoveAssignment()
 {
-    Studentas originalus;
-    originalus.setVardas("Tomas");
-    originalus.setPavarde("Tomaitis");
-    originalus.setEgz(9);
-    originalus.pridetiNd(10);
-    originalus.pridetiNd(10);
+    Studentas originalus("Tomas", "Tomaitis", 9, {10, 10});
 
     Studentas perkeltas;
     perkeltas = std::move(originalus);
@@ -128,11 +108,7 @@ void testInputOutputOperators()
 void testDestructor()
 {
     for (int i = 0; i < 1000; ++i) {
-        Studentas laikinas;
-        laikinas.setVardas("A");
-        laikinas.setPavarde("B");
-        laikinas.setEgz(1);
-        laikinas.pridetiNd(1);
+        Studentas laikinas("A", "B", 1, {1});
     }
 
     std::cout << "Destruktoriaus netiesioginis testas praejo.\n";
