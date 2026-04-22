@@ -11,10 +11,12 @@ protected:
 public:
     Zmogus() {};
 
-    Zmogus(std::string vardas, std::string pavarde)
-        : vardas_(vardas), pavarde_(pavarde) {};
+    Zmogus(std::string vardas, std::string pavarde) : vardas_(vardas), pavarde_(pavarde) {};
 
-    virtual ~Zmogus() {};
+    virtual ~Zmogus() {
+        vardas_.clear();
+        pavarde_.clear();
+    };
 
     // pure virtual funkcija pavercia klase abstrakcia
     virtual std::string tipas() const = 0;
