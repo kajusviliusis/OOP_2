@@ -17,7 +17,8 @@ private:
     double galMed_;
 
 public:
-    Studentas() : egz_(0), galVid_(0.0), galMed_(0.0) {}
+    Studentas() : vardas_(""), pavarde_(""), egz_(0), nd_{}, galVid_(0.0), galMed_(0.0) {}
+
     Studentas(const std::string& vardas, const std::string& pavarde)
        : vardas_(vardas), pavarde_(pavarde), egz_(0), galVid_(0.0), galMed_(0.0) {}
 
@@ -31,10 +32,21 @@ public:
     Studentas(Studentas&& s) // && - rvalue nuoroda, std::move pavercia i rvalue
         : vardas_(std::move(s.vardas_)), pavarde_(std::move(s.pavarde_)),
     egz_(s.egz_), nd_(std::move(s.nd_)),
-    galVid_(s.galVid_), galMed_(s.galMed_) {}
+    galVid_(s.galVid_), galMed_(s.galMed_) {
+        s.egz_ = 0;
+        s.galVid_ = 0.0;
+        s.galMed_ = 0.0;
+    }
 
     // destruktorius
-    ~Studentas() {nd_.clear();}
+    ~Studentas() {
+        vardas_.clear();
+        pavarde_.clear();
+        nd_.clear();
+        egz_ = 0;
+        galVid_ = 0.0;
+        galMed_ = 0.0;
+    }
 
     // copy assignment operatorius
     Studentas& operator=(const Studentas& s) {
@@ -54,10 +66,15 @@ public:
         if (this == &s) return *this;
         vardas_ = std::move(s.vardas_);
         pavarde_ = std::move(s.pavarde_);
-        egz_ = s.egz_;
         nd_ = std::move(s.nd_);
+        egz_ = s.egz_;
         galVid_ = s.galVid_;
         galMed_ = s.galMed_;
+
+        s.egz_ = 0;
+        s.galVid_ = 0.0;
+        s.galMed_ = 0.0;
+
 
         return *this;
     }
