@@ -53,6 +53,12 @@ void testMoveConstructor()
     assert(perkeltas.getNd()[0] == 8);
     assert(perkeltas.getNd()[1] == 9);
 
+
+    assert(originalus.getEgz() == 0);
+    assert(originalus.getVardas() == "");
+    assert(originalus.getNd().size() == 0);
+    assert(originalus.getPavarde() == "");
+
     std::cout << "Move konstruktorius praejo.\n";
 }
 
@@ -81,6 +87,11 @@ void testMoveAssignment()
     assert(perkeltas.getNd().size() == 2);
     assert(perkeltas.getNd()[0] == 10);
     assert(perkeltas.getNd()[1] == 10);
+
+    assert(originalus.getEgz() == 0);
+    assert(originalus.getVardas() == "");
+    assert(originalus.getNd().size() == 0);
+    assert(originalus.getPavarde() == "");
 
     std::cout << "Perkelimo priskyrimo operatorius praejo.\n";
 }
@@ -120,7 +131,7 @@ void testDestructor()
 int main()
 {
 
-    //Zmogus zmogus("Vardas", "Pavarde");
+    // Zmogus zmogus("Vardas", "Pavarde");
     //error: cannot declare variable ‘zmogus’ to be of abstract type ‘Zmogus’
     //note: because the following virtual functions are pure within ‘Zmogus’:
     //note: ‘virtual std::string Zmogus::tipas() const’
