@@ -1,4 +1,4 @@
-#include "Studentas.h"
+#include "../include/Studentas.h"
 
 #include <cassert>
 #include <exception>
@@ -6,6 +6,7 @@
 #include <sstream>
 #include <string>
 #include <type_traits>
+
 
 static_assert(std::is_abstract<Zmogus>::value, "Zmogus turi buti abstrakti klase");
 

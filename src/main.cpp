@@ -1,4 +1,4 @@
-#include "my_lib.h"
+#include "../include/my_lib.h"
 
 #include <cctype>
 #include <iomanip>

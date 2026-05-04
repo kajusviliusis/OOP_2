@@ -4,16 +4,16 @@ set(CMAKE_CXX_STANDARD 17)
 
 include_directories(.)
 
-add_executable(OOP_1
-        main.cpp
-        my_lib.cpp
-        my_lib.h
-        Studentas.h
-        Zmogus.h)
+add_executable(OOP_2
+        src/main.cpp
+        src/my_lib.cpp
+        include/my_lib.h
+        include/Studentas.h
+        include/Zmogus.h)
 
 add_executable(testai
-        testai.cpp
-        my_lib.cpp
-        my_lib.h
-        Studentas.h
-        Zmogus.h)
+        tests/studentas_test.cpp
+        src/my_lib.cpp
+        include/my_lib.h
+        include/Studentas.h
+        include/Zmogus.h)
