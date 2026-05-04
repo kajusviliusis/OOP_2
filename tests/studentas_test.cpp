@@ -88,6 +88,15 @@ TEST(StudentasTest, MoveAssignmentPerkeliaDuomenis)
     EXPECT_TRUE(originalus.getNd().empty());
 }
 
+TEST(StudentasTest, DestruktoriusVeikiaTrinantPerBazinesKlasesRodykle)
+{
+    Zmogus* zmogus = new Studentas("Jonas", "Jonaitis", 10, {8, 9, 10});
+
+    EXPECT_EQ(zmogus->tipas(), "Studentas");
+
+    delete zmogus;
+}
+
 TEST(StudentasTest, InputOperatorNuskaitoDuomenisTeisingai)
 {
     std::stringstream ivestis("Tomas Tomaitis 10 9 8 7\n");
