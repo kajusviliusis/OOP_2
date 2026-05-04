@@ -1,4 +1,4 @@
-#include "../include/Studentas.h"
+#include "Studentas.h"
 
 #include <cassert>
 #include <exception>
