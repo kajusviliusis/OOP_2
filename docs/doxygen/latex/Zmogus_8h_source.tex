@@ -1,0 +1,36 @@
+\doxysection{Zmogus.\+h}
+\hypertarget{Zmogus_8h_source}{}\label{Zmogus_8h_source}\index{include/Zmogus.h@{include/Zmogus.h}}
+\mbox{\hyperlink{Zmogus_8h}{Eiti į šio failo dokumentaciją.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ZMOGUS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ZMOGUS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classZmogus}{Zmogus}}\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00008\ \ \ \ \ std::string\ \mbox{\hyperlink{classZmogus_a80e72cd553492344884a264a72ce33d2}{vardas\_}};}
+\DoxyCodeLine{00009\ \ \ \ \ std::string\ \mbox{\hyperlink{classZmogus_a85cd6103a5f887059263d15413a3f081}{pavarde\_}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{classZmogus_aa7a8ba4d3c4778f9b35d59eef3e72574}{Zmogus}}()\ :\ \mbox{\hyperlink{classZmogus_a80e72cd553492344884a264a72ce33d2}{vardas\_}}(\textcolor{stringliteral}{"{}"{}}),\ \mbox{\hyperlink{classZmogus_a85cd6103a5f887059263d15413a3f081}{pavarde\_}}(\textcolor{stringliteral}{"{}"{}})\ \{\}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{classZmogus_adadfe5845f62fbce03263b7787610d69}{Zmogus}}(std::string\ vardas,\ std::string\ pavarde)\ :\ \mbox{\hyperlink{classZmogus_a80e72cd553492344884a264a72ce33d2}{vardas\_}}(vardas),\ \mbox{\hyperlink{classZmogus_a85cd6103a5f887059263d15413a3f081}{pavarde\_}}(pavarde)\ \{\};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classZmogus_ac5615bf607a8f2f1b303ffa04328d24d}{\string~Zmogus}}()\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classZmogus_a80e72cd553492344884a264a72ce33d2}{vardas\_}}.clear();}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classZmogus_a85cd6103a5f887059263d15413a3f081}{pavarde\_}}.clear();}
+\DoxyCodeLine{00019\ \ \ \ \ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ pure\ virtual\ funkcija\ pavercia\ klase\ abstrakcia}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{classZmogus_ac0cbaff86ba113aa32e72c13fc208818}{tipas}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{classZmogus_acf4a7481cb123bbb30cb82dd50102ebd}{getVardas}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classZmogus_a80e72cd553492344884a264a72ce33d2}{vardas\_}};\ \}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{classZmogus_af6fa0216be160cd70589a193709a0b36}{getPavarde}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classZmogus_a85cd6103a5f887059263d15413a3f081}{pavarde\_}};\ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classZmogus_a1cfb82338adcdbeecccebb8c77b4aaf4}{setVardas}}(\textcolor{keyword}{const}\ std::string\&\ v)\ \{\ \mbox{\hyperlink{classZmogus_a80e72cd553492344884a264a72ce33d2}{vardas\_}}\ =\ v;\ \}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classZmogus_a604c508fa587671a7d1df8f0522c63e9}{setPavarde}}(\textcolor{keyword}{const}\ std::string\&\ p)\ \{\ \mbox{\hyperlink{classZmogus_a85cd6103a5f887059263d15413a3f081}{pavarde\_}}\ =\ p;\ \}}
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

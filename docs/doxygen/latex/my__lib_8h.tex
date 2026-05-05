@@ -1,0 +1,183 @@
+\doxysection{include/my\+\_\+lib.h Failo Nuoroda}
+\hypertarget{my__lib_8h}{}\label{my__lib_8h}\index{include/my\_lib.h@{include/my\_lib.h}}
+{\ttfamily \#include "{}Studentas.\+h"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$deque$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+Įtraukimo priklausomybių diagrama my\+\_\+lib.\+h\+:
+% FIG 0
+Šis grafas rodo, kuris failas tiesiogiai ar netiesiogiai įtraukia šį failą\+:
+% FIG 1
+\doxysubsubsection*{Funkcijos}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{my__lib_8h_aa40071e156e3c0092270f12a5fb8a568}{rodyti\+Rezultatus}} (const std\+::vector$<$ \mbox{\hyperlink{classStudentas}{Studentas}} $>$ \&studentai)
+\item 
+void \mbox{\hyperlink{my__lib_8h_a4b67dd0dc00728a30a6dfd340ec54ad6}{generuoti\+Pazymius}} (\mbox{\hyperlink{classStudentas}{Studentas}} \&s)
+\item 
+void \mbox{\hyperlink{my__lib_8h_a9691bf4330330f795de00757a31c3c09}{generuoti\+Studentus}} (std\+::vector$<$ \mbox{\hyperlink{classStudentas}{Studentas}} $>$ \&studentai)
+\item 
+void \mbox{\hyperlink{my__lib_8h_ad5e31f0247674f1f9fc3484f7f2034f3}{rodyti\+Rez}} (const std\+::vector$<$ \mbox{\hyperlink{classStudentas}{Studentas}} $>$ \&studentai)
+\item 
+bool \mbox{\hyperlink{my__lib_8h_a94f68fdcfd637506352039d180a74fcd}{rikiuoti\+Varda}} (const \mbox{\hyperlink{classStudentas}{Studentas}} \&A, const \mbox{\hyperlink{classStudentas}{Studentas}} \&B)
+\item 
+bool \mbox{\hyperlink{my__lib_8h_a1912f5fe2e8847daad5be729d2fcbb72}{rikiuoti\+Pavarde}} (const \mbox{\hyperlink{classStudentas}{Studentas}} \&A, const \mbox{\hyperlink{classStudentas}{Studentas}} \&B)
+\item 
+bool \mbox{\hyperlink{my__lib_8h_ab2684292f7b898c56c03e523345fc4e5}{rikiuoti\+Pagal\+Galutini\+Vid}} (const \mbox{\hyperlink{classStudentas}{Studentas}} \&A, const \mbox{\hyperlink{classStudentas}{Studentas}} \&B)
+\item 
+bool \mbox{\hyperlink{my__lib_8h_a211e71cbc8ece1b2ca88c9d26c16f8b4}{rikiuoti\+Pagal\+Galutini\+Med}} (const \mbox{\hyperlink{classStudentas}{Studentas}} \&A, const \mbox{\hyperlink{classStudentas}{Studentas}} \&B)
+\item 
+void \mbox{\hyperlink{my__lib_8h_a2cef6a28805a2e6f70c2ae0af31c497c}{nuskaityti\+Faila\+Testavimui}} (std\+::vector$<$ \mbox{\hyperlink{classStudentas}{Studentas}} $>$ \&studentai, int kartai)
+\item 
+void \mbox{\hyperlink{my__lib_8h_ae61f71c380bfa061ec1cb48611ce3d90}{generuoti\+Faila}} (int studentu\+Sk)
+\item 
+void \mbox{\hyperlink{my__lib_8h_ab6610dee2069d0b45b6abe86ee9e126d}{isvesti\+Du\+Failus}} (const std\+::vector$<$ \mbox{\hyperlink{classStudentas}{Studentas}} $>$ \&vargsai, const std\+::vector$<$ \mbox{\hyperlink{classStudentas}{Studentas}} $>$ \&kieti)
+\item 
+void \mbox{\hyperlink{my__lib_8h_acbdcb1c78b562e6858a798f4a390bdca}{atlikti\+Pirma\+Tyrima}} ()
+\item 
+void \mbox{\hyperlink{my__lib_8h_ae8ec5d82d1e6dff76e51ca7394523a5d}{atlikti\+Antra\+Tyrima}} ()
+\item 
+{\footnotesize template$<$typename Konteineris $>$ }\\void \mbox{\hyperlink{my__lib_8h_ac2efde9f03706ed11b63492a42962d2c}{nuskaityti\+Faila}} (Konteineris \&studentai, const std\+::string \&failo\+Vardas)
+\item 
+{\footnotesize template$<$typename Konteineris $>$ }\\void \mbox{\hyperlink{my__lib_8h_a59185f0a42305d1220868156e940ffe6}{rikiuoti\+Studentus}} (Konteineris \&studentai, int pasirinkimas)
+\item 
+{\footnotesize template$<$typename Konteineris $>$ }\\void \mbox{\hyperlink{my__lib_8h_a1f2ab8738d5438aec585ceb805874baa}{paskirstyti\+Studentus}} (const Konteineris \&studentai, Konteineris \&vargsai, Konteineris \&kieti)
+\item 
+{\footnotesize template$<$typename Konteineris $>$ }\\void \mbox{\hyperlink{my__lib_8h_a7ee50d53a90d8093f8797f39fe077f65}{paskirstyti\+Studentus\+S2}} (Konteineris \&studentai, Konteineris \&vargsai)
+\item 
+{\footnotesize template$<$typename Konteineris $>$ }\\void \mbox{\hyperlink{my__lib_8h_af5f83870d0793c093f90d9dd2a634b9f}{paskirstyti\+Studentus\+S3}} (Konteineris \&studentai, Konteineris \&vargsai)
+\item 
+{\footnotesize template$<$typename Konteineris $>$ }\\void \mbox{\hyperlink{my__lib_8h_ad0ea88da240d9ace50f82b6a2e062cb9}{atlikti\+Antra\+Tyrima}} (int strategija)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Funkcijos Dokumentacija}
+\Hypertarget{my__lib_8h_ae8ec5d82d1e6dff76e51ca7394523a5d}\label{my__lib_8h_ae8ec5d82d1e6dff76e51ca7394523a5d} 
+\index{my\_lib.h@{my\_lib.h}!atliktiAntraTyrima@{atliktiAntraTyrima}}
+\index{atliktiAntraTyrima@{atliktiAntraTyrima}!my\_lib.h@{my\_lib.h}}
+\doxysubsubsection{\texorpdfstring{atliktiAntraTyrima()}{atliktiAntraTyrima()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void atlikti\+Antra\+Tyrima (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{my__lib_8h_ad0ea88da240d9ace50f82b6a2e062cb9}\label{my__lib_8h_ad0ea88da240d9ace50f82b6a2e062cb9} 
+\index{my\_lib.h@{my\_lib.h}!atliktiAntraTyrima@{atliktiAntraTyrima}}
+\index{atliktiAntraTyrima@{atliktiAntraTyrima}!my\_lib.h@{my\_lib.h}}
+\doxysubsubsection{\texorpdfstring{atliktiAntraTyrima()}{atliktiAntraTyrima()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Konteineris $>$ \\
+void atlikti\+Antra\+Tyrima (\begin{DoxyParamCaption}\item[{int}]{strategija }\end{DoxyParamCaption})}
+
+\Hypertarget{my__lib_8h_acbdcb1c78b562e6858a798f4a390bdca}\label{my__lib_8h_acbdcb1c78b562e6858a798f4a390bdca} 
+\index{my\_lib.h@{my\_lib.h}!atliktiPirmaTyrima@{atliktiPirmaTyrima}}
+\index{atliktiPirmaTyrima@{atliktiPirmaTyrima}!my\_lib.h@{my\_lib.h}}
+\doxysubsubsection{\texorpdfstring{atliktiPirmaTyrima()}{atliktiPirmaTyrima()}}
+{\footnotesize\ttfamily void atlikti\+Pirma\+Tyrima (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{my__lib_8h_ae61f71c380bfa061ec1cb48611ce3d90}\label{my__lib_8h_ae61f71c380bfa061ec1cb48611ce3d90} 
+\index{my\_lib.h@{my\_lib.h}!generuotiFaila@{generuotiFaila}}
+\index{generuotiFaila@{generuotiFaila}!my\_lib.h@{my\_lib.h}}
+\doxysubsubsection{\texorpdfstring{generuotiFaila()}{generuotiFaila()}}
+{\footnotesize\ttfamily void generuoti\+Faila (\begin{DoxyParamCaption}\item[{int}]{studentu\+Sk }\end{DoxyParamCaption})}
+
+\Hypertarget{my__lib_8h_a4b67dd0dc00728a30a6dfd340ec54ad6}\label{my__lib_8h_a4b67dd0dc00728a30a6dfd340ec54ad6} 
+\index{my\_lib.h@{my\_lib.h}!generuotiPazymius@{generuotiPazymius}}
+\index{generuotiPazymius@{generuotiPazymius}!my\_lib.h@{my\_lib.h}}
+\doxysubsubsection{\texorpdfstring{generuotiPazymius()}{generuotiPazymius()}}
+{\footnotesize\ttfamily void generuoti\+Pazymius (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classStudentas}{Studentas}} \&}]{s }\end{DoxyParamCaption})}
+
+\Hypertarget{my__lib_8h_a9691bf4330330f795de00757a31c3c09}\label{my__lib_8h_a9691bf4330330f795de00757a31c3c09} 
+\index{my\_lib.h@{my\_lib.h}!generuotiStudentus@{generuotiStudentus}}
+\index{generuotiStudentus@{generuotiStudentus}!my\_lib.h@{my\_lib.h}}
+\doxysubsubsection{\texorpdfstring{generuotiStudentus()}{generuotiStudentus()}}
+{\footnotesize\ttfamily void generuoti\+Studentus (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classStudentas}{Studentas}} $>$ \&}]{studentai }\end{DoxyParamCaption})}
+
+\Hypertarget{my__lib_8h_ab6610dee2069d0b45b6abe86ee9e126d}\label{my__lib_8h_ab6610dee2069d0b45b6abe86ee9e126d} 
+\index{my\_lib.h@{my\_lib.h}!isvestiDuFailus@{isvestiDuFailus}}
+\index{isvestiDuFailus@{isvestiDuFailus}!my\_lib.h@{my\_lib.h}}
+\doxysubsubsection{\texorpdfstring{isvestiDuFailus()}{isvestiDuFailus()}}
+{\footnotesize\ttfamily void isvesti\+Du\+Failus (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classStudentas}{Studentas}} $>$ \&}]{vargsai,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classStudentas}{Studentas}} $>$ \&}]{kieti }\end{DoxyParamCaption})}
+
+\Hypertarget{my__lib_8h_ac2efde9f03706ed11b63492a42962d2c}\label{my__lib_8h_ac2efde9f03706ed11b63492a42962d2c} 
+\index{my\_lib.h@{my\_lib.h}!nuskaitytiFaila@{nuskaitytiFaila}}
+\index{nuskaitytiFaila@{nuskaitytiFaila}!my\_lib.h@{my\_lib.h}}
+\doxysubsubsection{\texorpdfstring{nuskaitytiFaila()}{nuskaitytiFaila()}}
+{\footnotesize\ttfamily template$<$typename Konteineris $>$ \\
+void nuskaityti\+Faila (\begin{DoxyParamCaption}\item[{Konteineris \&}]{studentai,  }\item[{const std\+::string \&}]{failo\+Vardas }\end{DoxyParamCaption})}
+
+\Hypertarget{my__lib_8h_a2cef6a28805a2e6f70c2ae0af31c497c}\label{my__lib_8h_a2cef6a28805a2e6f70c2ae0af31c497c} 
+\index{my\_lib.h@{my\_lib.h}!nuskaitytiFailaTestavimui@{nuskaitytiFailaTestavimui}}
+\index{nuskaitytiFailaTestavimui@{nuskaitytiFailaTestavimui}!my\_lib.h@{my\_lib.h}}
+\doxysubsubsection{\texorpdfstring{nuskaitytiFailaTestavimui()}{nuskaitytiFailaTestavimui()}}
+{\footnotesize\ttfamily void nuskaityti\+Faila\+Testavimui (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classStudentas}{Studentas}} $>$ \&}]{studentai,  }\item[{int}]{kartai }\end{DoxyParamCaption})}
+
+\Hypertarget{my__lib_8h_a1f2ab8738d5438aec585ceb805874baa}\label{my__lib_8h_a1f2ab8738d5438aec585ceb805874baa} 
+\index{my\_lib.h@{my\_lib.h}!paskirstytiStudentus@{paskirstytiStudentus}}
+\index{paskirstytiStudentus@{paskirstytiStudentus}!my\_lib.h@{my\_lib.h}}
+\doxysubsubsection{\texorpdfstring{paskirstytiStudentus()}{paskirstytiStudentus()}}
+{\footnotesize\ttfamily template$<$typename Konteineris $>$ \\
+void paskirstyti\+Studentus (\begin{DoxyParamCaption}\item[{const Konteineris \&}]{studentai,  }\item[{Konteineris \&}]{vargsai,  }\item[{Konteineris \&}]{kieti }\end{DoxyParamCaption})}
+
+\Hypertarget{my__lib_8h_a7ee50d53a90d8093f8797f39fe077f65}\label{my__lib_8h_a7ee50d53a90d8093f8797f39fe077f65} 
+\index{my\_lib.h@{my\_lib.h}!paskirstytiStudentusS2@{paskirstytiStudentusS2}}
+\index{paskirstytiStudentusS2@{paskirstytiStudentusS2}!my\_lib.h@{my\_lib.h}}
+\doxysubsubsection{\texorpdfstring{paskirstytiStudentusS2()}{paskirstytiStudentusS2()}}
+{\footnotesize\ttfamily template$<$typename Konteineris $>$ \\
+void paskirstyti\+Studentus\+S2 (\begin{DoxyParamCaption}\item[{Konteineris \&}]{studentai,  }\item[{Konteineris \&}]{vargsai }\end{DoxyParamCaption})}
+
+\Hypertarget{my__lib_8h_af5f83870d0793c093f90d9dd2a634b9f}\label{my__lib_8h_af5f83870d0793c093f90d9dd2a634b9f} 
+\index{my\_lib.h@{my\_lib.h}!paskirstytiStudentusS3@{paskirstytiStudentusS3}}
+\index{paskirstytiStudentusS3@{paskirstytiStudentusS3}!my\_lib.h@{my\_lib.h}}
+\doxysubsubsection{\texorpdfstring{paskirstytiStudentusS3()}{paskirstytiStudentusS3()}}
+{\footnotesize\ttfamily template$<$typename Konteineris $>$ \\
+void paskirstyti\+Studentus\+S3 (\begin{DoxyParamCaption}\item[{Konteineris \&}]{studentai,  }\item[{Konteineris \&}]{vargsai }\end{DoxyParamCaption})}
+
+\Hypertarget{my__lib_8h_a211e71cbc8ece1b2ca88c9d26c16f8b4}\label{my__lib_8h_a211e71cbc8ece1b2ca88c9d26c16f8b4} 
+\index{my\_lib.h@{my\_lib.h}!rikiuotiPagalGalutiniMed@{rikiuotiPagalGalutiniMed}}
+\index{rikiuotiPagalGalutiniMed@{rikiuotiPagalGalutiniMed}!my\_lib.h@{my\_lib.h}}
+\doxysubsubsection{\texorpdfstring{rikiuotiPagalGalutiniMed()}{rikiuotiPagalGalutiniMed()}}
+{\footnotesize\ttfamily bool rikiuoti\+Pagal\+Galutini\+Med (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classStudentas}{Studentas}} \&}]{A,  }\item[{const \mbox{\hyperlink{classStudentas}{Studentas}} \&}]{B }\end{DoxyParamCaption})}
+
+\Hypertarget{my__lib_8h_ab2684292f7b898c56c03e523345fc4e5}\label{my__lib_8h_ab2684292f7b898c56c03e523345fc4e5} 
+\index{my\_lib.h@{my\_lib.h}!rikiuotiPagalGalutiniVid@{rikiuotiPagalGalutiniVid}}
+\index{rikiuotiPagalGalutiniVid@{rikiuotiPagalGalutiniVid}!my\_lib.h@{my\_lib.h}}
+\doxysubsubsection{\texorpdfstring{rikiuotiPagalGalutiniVid()}{rikiuotiPagalGalutiniVid()}}
+{\footnotesize\ttfamily bool rikiuoti\+Pagal\+Galutini\+Vid (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classStudentas}{Studentas}} \&}]{A,  }\item[{const \mbox{\hyperlink{classStudentas}{Studentas}} \&}]{B }\end{DoxyParamCaption})}
+
+\Hypertarget{my__lib_8h_a1912f5fe2e8847daad5be729d2fcbb72}\label{my__lib_8h_a1912f5fe2e8847daad5be729d2fcbb72} 
+\index{my\_lib.h@{my\_lib.h}!rikiuotiPavarde@{rikiuotiPavarde}}
+\index{rikiuotiPavarde@{rikiuotiPavarde}!my\_lib.h@{my\_lib.h}}
+\doxysubsubsection{\texorpdfstring{rikiuotiPavarde()}{rikiuotiPavarde()}}
+{\footnotesize\ttfamily bool rikiuoti\+Pavarde (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classStudentas}{Studentas}} \&}]{A,  }\item[{const \mbox{\hyperlink{classStudentas}{Studentas}} \&}]{B }\end{DoxyParamCaption})}
+
+\Hypertarget{my__lib_8h_a59185f0a42305d1220868156e940ffe6}\label{my__lib_8h_a59185f0a42305d1220868156e940ffe6} 
+\index{my\_lib.h@{my\_lib.h}!rikiuotiStudentus@{rikiuotiStudentus}}
+\index{rikiuotiStudentus@{rikiuotiStudentus}!my\_lib.h@{my\_lib.h}}
+\doxysubsubsection{\texorpdfstring{rikiuotiStudentus()}{rikiuotiStudentus()}}
+{\footnotesize\ttfamily template$<$typename Konteineris $>$ \\
+void rikiuoti\+Studentus (\begin{DoxyParamCaption}\item[{Konteineris \&}]{studentai,  }\item[{int}]{pasirinkimas }\end{DoxyParamCaption})}
+
+\Hypertarget{my__lib_8h_a94f68fdcfd637506352039d180a74fcd}\label{my__lib_8h_a94f68fdcfd637506352039d180a74fcd} 
+\index{my\_lib.h@{my\_lib.h}!rikiuotiVarda@{rikiuotiVarda}}
+\index{rikiuotiVarda@{rikiuotiVarda}!my\_lib.h@{my\_lib.h}}
+\doxysubsubsection{\texorpdfstring{rikiuotiVarda()}{rikiuotiVarda()}}
+{\footnotesize\ttfamily bool rikiuoti\+Varda (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classStudentas}{Studentas}} \&}]{A,  }\item[{const \mbox{\hyperlink{classStudentas}{Studentas}} \&}]{B }\end{DoxyParamCaption})}
+
+\Hypertarget{my__lib_8h_ad5e31f0247674f1f9fc3484f7f2034f3}\label{my__lib_8h_ad5e31f0247674f1f9fc3484f7f2034f3} 
+\index{my\_lib.h@{my\_lib.h}!rodytiRez@{rodytiRez}}
+\index{rodytiRez@{rodytiRez}!my\_lib.h@{my\_lib.h}}
+\doxysubsubsection{\texorpdfstring{rodytiRez()}{rodytiRez()}}
+{\footnotesize\ttfamily void rodyti\+Rez (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classStudentas}{Studentas}} $>$ \&}]{studentai }\end{DoxyParamCaption})}
+
+\Hypertarget{my__lib_8h_aa40071e156e3c0092270f12a5fb8a568}\label{my__lib_8h_aa40071e156e3c0092270f12a5fb8a568} 
+\index{my\_lib.h@{my\_lib.h}!rodytiRezultatus@{rodytiRezultatus}}
+\index{rodytiRezultatus@{rodytiRezultatus}!my\_lib.h@{my\_lib.h}}
+\doxysubsubsection{\texorpdfstring{rodytiRezultatus()}{rodytiRezultatus()}}
+{\footnotesize\ttfamily void rodyti\+Rezultatus (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classStudentas}{Studentas}} $>$ \&}]{studentai }\end{DoxyParamCaption})}
+
