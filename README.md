@@ -40,6 +40,8 @@ cmake --build .
 ## v2.0
 
 Šioje versijoje projektas papildytas automatizuotais unit testais ir Doxygen dokumentacija. Unit testai realizuoti naudojant GoogleTest karkasą, o testų tikslas - patikrinti svarbiausią `Studentas` klasės elgseną: konstruktorių, kopijavimą, perkėlimą, priskyrimo operatorių, įvesties/išvesties operatorių ir galutinio balo skaičiavimą.
+<img width="695" height="63" alt="image" src="https://github.com/user-attachments/assets/db87ca6b-99d9-4689-a9bf-f10f5e8850e3" />
+
 
 ## v1.5
 
