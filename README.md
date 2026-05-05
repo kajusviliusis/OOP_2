@@ -17,8 +17,8 @@ Instaliuokite CMake, C++ kompiliatorių.
 1. Klonuoti projektą:
 
 ```
-git clone https://github.com/kajusviliusis/OOP_1.git
-cd OOP_1
+git clone https://github.com/kajusviliusis/OOP_2.git
+cd OOP_2
 ```
 2. Sukurti build directory ir kompiliuoti su CMake:
 ```
@@ -30,41 +30,66 @@ cmake --build .
 
 3. Paleisti programą:
 ```
-./OOP_1
+./OOP_2
 ```
 4. Paleisti testus:
 ```
 ./testai
 ```
 
+## v2.0
+
+Šioje versijoje projektas papildytas automatizuotais unit testais ir Doxygen dokumentacija. Unit testai realizuoti naudojant GoogleTest karkasą, o testų tikslas - patikrinti svarbiausią `Studentas` klasės elgseną: konstruktorių, kopijavimą, perkėlimą, priskyrimo operatorių, įvesties/išvesties operatorių ir galutinio balo skaičiavimą.
+
 ## v1.5
 
-Sioje versijoje prideta bazine (abstrakti) klase `Zmogus` ir is jos isvestine (derived) klase `Studentas`.
-Programa naudoja ta pacia v1.2 logika, tik `Studentas` dabar paveldi bendra informacija apie zmogu (varda ir pavarde).
+Šioje versijoje pridėta bazinė (abstrakti) klasė `Zmogus` ir iš jos išvestinė (derived) klasė `Studentas`.
+Programa naudoja tą pačią v1.2 logiką, tik `Studentas` dabar paveldi bendrą informaciją apie žmogų (vardą ir pavardę).
 
-### Klasiu struktura
+### Klasių struktūra
 
-| Klase | Tipas | Paskirtis | Pastabos |
+| Klasė | Tipas | Paskirtis | Pastabos |
 |------|------|----------|---------|
-| `Zmogus` | Abstrakti bazine | Saugo bendra informacija apie zmogu (`vardas_`, `pavarde_`) | Negalima sukurti `Zmogus` objektu, nes turi `virtual std::string tipas() const = 0;` |
-| `Studentas` | Isvestine is `Zmogus` | Saugo studento pazymius ir skaiciavimus | Igyvendina `tipas()` ir palaiko v1.2 rule of five |
+| `Zmogus` | Abstrakti bazinė | Saugo bendrą informaciją apie žmogų (`vardas_`, `pavarde_`) | Negalima sukurti `Zmogus` objektų, nes turi `virtual std::string tipas() const = 0;` |
+| `Studentas` | Išvestinė iš `Zmogus` | Saugo studento pažymius ir skaičiavimus | Įgyvendina `tipas()` ir palaiko v1.2 rule of five |
 
-Bandant sukurti Zmogaus objekta:
+Bandant sukurti žmogaus objektą:
 <img width="1583" height="303" alt="image" src="https://github.com/user-attachments/assets/4056d6af-b2b6-4256-b4e5-825ba84253fe" />
 
+## v1.2
+
+Šioje versijoje klasė `Studentas` papildyta pilnai realizuotais rule of five metodais ir perdengtais įvesties/išvesties operatoriais.
 
 ### Realizuoti metodai ir operatoriai
 
 | Funkcionalumas              | Realizacija | Kada naudojama                                                              |
 |-----------------------------|---|-----------------------------------------------------------------------------|
-| Copy konstruktorius         | `Studentas(const Studentas& s)` | Kai sukuriama objekto kopija (pvz. kopijuojant i konteinerius)              |
+| Copy konstruktorius         | `Studentas(const Studentas& s)` | Kai sukuriama objekto kopija (pvz. kopijuojant į konteinerius)              |
 | Copy assignment operatorius | `Studentas& operator=(const Studentas& s)` | Kai vykdomas priskyrimas `a = b`                                            |
-| Move konstruktorius         | `Studentas(Studentas&& s)` | Kai objektas perkeliamas is laikino (pvz. su `std::move`)                   |
+| Move konstruktorius         | `Studentas(Studentas&& s)` | Kai objektas perkeliamas iš laikino (pvz. su `std::move`)                   |
 | Move assignment operatorius | `Studentas& operator=(Studentas&& s)` | Kai vykdomas `a = std::move(b)`                                             |
-| Destruktorius               | `~Studentas()` | Automatiskai kvieciamas iseinant is scope                                   |
-| Ivesties operatorius        | `operator>>(std::istream&, Studentas&)` | Skaito eilute formatu `Vardas Pavarde ND... Egz` (tinka failams ir testams) |
-| Isvesties operatorius       | `operator<<(std::ostream&, const Studentas&)` | Isveda `Vardas Pavarde ND... Egz` (patogu spausdinimui ir testams)          |
+| Destruktorius               | `~Studentas()` | Automatiškai kviečiamas išeinant iš scope                                   |
+| Įvesties operatorius        | `operator>>(std::istream&, Studentas&)` | Skaito eilutę formatu `Vardas Pavarde ND... Egz` (tinka failams ir testams) |
+| Išvesties operatorius       | `operator<<(std::ostream&, const Studentas&)` | Išveda `Vardas Pavarde ND... Egz` (patogu spausdinimui ir testams)          |
 
-Visi metodai, operatoriai atliekus testavima vis dar veikia teisingai:
+Visi metodai ir operatoriai atlikus testavimą veikia teisingai:
 
 <img width="565" height="252" alt="image" src="https://github.com/user-attachments/assets/61c50a74-307b-4a2e-a51f-06d304c95645" />
+
+
+## v1.1
+
+v1.1 šaka sukurta siekiant palyginti class ir struct naudojimą studentų duomenų saugojimui. Žemiau pateikiami atlikto tyrimo rezultatai. Versijoje v1.1 įgyvendinta class struktūra lyginama su v1.0, kurioje naudotas struct.
+Tyrimas atliktas pasitelkiant 3 strategiją ir naudojant vektoriaus konteinerį.
+
+| Programos veikimo laikas su CLASS | Programos veikimo laikas su STRUCT | Studentų kiekis | Optimizavimo vėliava | Vykdomojo failo dydis su CLASS (KB) | Vykdomojo failo dydis su STRUCT (KB) |
+| ------ | ----- | --------------- | ------------------------ | ---- | ---- |
+| 0.2189s | 0.2070s | 100 000 | -O1 | 149 | 149 |
+| 0.2282s | 0.2137s | 100 000 | -O2 | 146 | 153 |
+| 0.2261s | 0.2019s | 100 000 | -O3 | 148 | 152 |
+| 0.4896s | 0.4138s | 100 000 | - | 234 | 229 |
+|  |  |  |  |  |  |
+| 1.7954s | 1.9903s | 1 000 000 | -O1 | 149 | 149 |
+| 1.7116s | 2.1445s | 1 000 000 | -O2 | 146 | 153 |
+| 1.7465s | 2.0847s | 1 000 000 | -O3 | 148 | 152 |
+| 4.4061s | 4.4432s | 1 000 000 | - | 234 | 229 |
