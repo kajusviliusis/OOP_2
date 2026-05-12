@@ -10,84 +10,84 @@
 \contentsline {section}{\numberline {4.1}Studentas Klasė}{7}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Konstruktoriaus ir Destruktoriaus Dokumentacija}{8}{subsection.4.1.1}%
 \contentsline {subsubsection}{\numberline {4.1.1.1}Studentas()\hspace {0.1cm}{\footnotesize \ttfamily [1/4]}}{8}{subsubsection.4.1.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.1.2}Studentas()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{8}{subsubsection.4.1.1.2}%
-\contentsline {subsubsection}{\numberline {4.1.1.3}Studentas()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{8}{subsubsection.4.1.1.3}%
-\contentsline {subsubsection}{\numberline {4.1.1.4}Studentas()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{8}{subsubsection.4.1.1.4}%
-\contentsline {subsubsection}{\numberline {4.1.1.5}$\sim $Studentas()}{8}{subsubsection.4.1.1.5}%
-\contentsline {subsection}{\numberline {4.1.2}Metodų Dokumentacija}{8}{subsection.4.1.2}%
-\contentsline {subsubsection}{\numberline {4.1.2.1}getEgz()}{8}{subsubsection.4.1.2.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.2}Studentas()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{9}{subsubsection.4.1.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.1.3}Studentas()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{9}{subsubsection.4.1.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.1.4}Studentas()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{9}{subsubsection.4.1.1.4}%
+\contentsline {subsubsection}{\numberline {4.1.1.5}$\sim $Studentas()}{9}{subsubsection.4.1.1.5}%
+\contentsline {subsection}{\numberline {4.1.2}Metodų Dokumentacija}{9}{subsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}getEgz()}{9}{subsubsection.4.1.2.1}%
 \contentsline {subsubsection}{\numberline {4.1.2.2}getGalMed()}{9}{subsubsection.4.1.2.2}%
 \contentsline {subsubsection}{\numberline {4.1.2.3}getGalVid()}{9}{subsubsection.4.1.2.3}%
 \contentsline {subsubsection}{\numberline {4.1.2.4}getNd()}{9}{subsubsection.4.1.2.4}%
 \contentsline {subsubsection}{\numberline {4.1.2.5}isvalytiNd()}{9}{subsubsection.4.1.2.5}%
-\contentsline {subsubsection}{\numberline {4.1.2.6}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{9}{subsubsection.4.1.2.6}%
-\contentsline {subsubsection}{\numberline {4.1.2.7}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{9}{subsubsection.4.1.2.7}%
-\contentsline {subsubsection}{\numberline {4.1.2.8}pasalintiPaskutiniNd()}{9}{subsubsection.4.1.2.8}%
-\contentsline {subsubsection}{\numberline {4.1.2.9}pridetiNd()}{9}{subsubsection.4.1.2.9}%
-\contentsline {subsubsection}{\numberline {4.1.2.10}setEgz()}{9}{subsubsection.4.1.2.10}%
+\contentsline {subsubsection}{\numberline {4.1.2.6}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{10}{subsubsection.4.1.2.6}%
+\contentsline {subsubsection}{\numberline {4.1.2.7}operator=()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{10}{subsubsection.4.1.2.7}%
+\contentsline {subsubsection}{\numberline {4.1.2.8}pasalintiPaskutiniNd()}{10}{subsubsection.4.1.2.8}%
+\contentsline {subsubsection}{\numberline {4.1.2.9}pridetiNd()}{10}{subsubsection.4.1.2.9}%
+\contentsline {subsubsection}{\numberline {4.1.2.10}setEgz()}{10}{subsubsection.4.1.2.10}%
 \contentsline {subsubsection}{\numberline {4.1.2.11}setGalMed()}{10}{subsubsection.4.1.2.11}%
 \contentsline {subsubsection}{\numberline {4.1.2.12}setGalVid()}{10}{subsubsection.4.1.2.12}%
 \contentsline {subsubsection}{\numberline {4.1.2.13}skaiciuotiGalutiniSuMed()}{10}{subsubsection.4.1.2.13}%
 \contentsline {subsubsection}{\numberline {4.1.2.14}skaiciuotiGalutiniSuVid()}{10}{subsubsection.4.1.2.14}%
-\contentsline {subsubsection}{\numberline {4.1.2.15}tipas()}{10}{subsubsection.4.1.2.15}%
-\contentsline {subsection}{\numberline {4.1.3}Draugiškų Ir Susijusių Funkcijų Dokumentacija}{10}{subsection.4.1.3}%
-\contentsline {subsubsection}{\numberline {4.1.3.1}operator$<$$<$}{10}{subsubsection.4.1.3.1}%
-\contentsline {subsubsection}{\numberline {4.1.3.2}operator$>$$>$}{10}{subsubsection.4.1.3.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.15}tipas()}{11}{subsubsection.4.1.2.15}%
+\contentsline {subsection}{\numberline {4.1.3}Draugiškų Ir Susijusių Funkcijų Dokumentacija}{11}{subsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.3.1}operator$<$$<$}{11}{subsubsection.4.1.3.1}%
+\contentsline {subsubsection}{\numberline {4.1.3.2}operator$>$$>$}{11}{subsubsection.4.1.3.2}%
 \contentsline {section}{\numberline {4.2}Zmogus Klasė}{11}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Konstruktoriaus ir Destruktoriaus Dokumentacija}{11}{subsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.1.1}Zmogus()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{11}{subsubsection.4.2.1.1}%
-\contentsline {subsubsection}{\numberline {4.2.1.2}Zmogus()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{11}{subsubsection.4.2.1.2}%
-\contentsline {subsubsection}{\numberline {4.2.1.3}$\sim $Zmogus()}{11}{subsubsection.4.2.1.3}%
-\contentsline {subsection}{\numberline {4.2.2}Metodų Dokumentacija}{11}{subsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.2.1}getPavarde()}{11}{subsubsection.4.2.2.1}%
+\contentsline {subsection}{\numberline {4.2.1}Konstruktoriaus ir Destruktoriaus Dokumentacija}{12}{subsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}Zmogus()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{12}{subsubsection.4.2.1.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.2}Zmogus()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{12}{subsubsection.4.2.1.2}%
+\contentsline {subsubsection}{\numberline {4.2.1.3}$\sim $Zmogus()}{12}{subsubsection.4.2.1.3}%
+\contentsline {subsection}{\numberline {4.2.2}Metodų Dokumentacija}{12}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}getPavarde()}{12}{subsubsection.4.2.2.1}%
 \contentsline {subsubsection}{\numberline {4.2.2.2}getVardas()}{12}{subsubsection.4.2.2.2}%
 \contentsline {subsubsection}{\numberline {4.2.2.3}setPavarde()}{12}{subsubsection.4.2.2.3}%
-\contentsline {subsubsection}{\numberline {4.2.2.4}setVardas()}{12}{subsubsection.4.2.2.4}%
-\contentsline {subsubsection}{\numberline {4.2.2.5}tipas()}{12}{subsubsection.4.2.2.5}%
-\contentsline {subsection}{\numberline {4.2.3}Atributų Dokumentacija}{12}{subsection.4.2.3}%
-\contentsline {subsubsection}{\numberline {4.2.3.1}pavarde\_}{12}{subsubsection.4.2.3.1}%
-\contentsline {subsubsection}{\numberline {4.2.3.2}vardas\_}{12}{subsubsection.4.2.3.2}%
-\contentsline {chapter}{\numberline {5}Failo Dokumentacija}{13}{chapter.5}%
-\contentsline {section}{\numberline {5.1}include/my\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}lib.h Failo Nuoroda}{13}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Funkcijos Dokumentacija}{14}{subsection.5.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.1.1}atliktiAntraTyrima()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{14}{subsubsection.5.1.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.1.2}atliktiAntraTyrima()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{14}{subsubsection.5.1.1.2}%
-\contentsline {subsubsection}{\numberline {5.1.1.3}atliktiPirmaTyrima()}{14}{subsubsection.5.1.1.3}%
-\contentsline {subsubsection}{\numberline {5.1.1.4}generuotiFaila()}{14}{subsubsection.5.1.1.4}%
-\contentsline {subsubsection}{\numberline {5.1.1.5}generuotiPazymius()}{14}{subsubsection.5.1.1.5}%
-\contentsline {subsubsection}{\numberline {5.1.1.6}generuotiStudentus()}{14}{subsubsection.5.1.1.6}%
-\contentsline {subsubsection}{\numberline {5.1.1.7}isvestiDuFailus()}{14}{subsubsection.5.1.1.7}%
-\contentsline {subsubsection}{\numberline {5.1.1.8}nuskaitytiFaila()}{15}{subsubsection.5.1.1.8}%
-\contentsline {subsubsection}{\numberline {5.1.1.9}nuskaitytiFailaTestavimui()}{15}{subsubsection.5.1.1.9}%
-\contentsline {subsubsection}{\numberline {5.1.1.10}paskirstytiStudentus()}{15}{subsubsection.5.1.1.10}%
-\contentsline {subsubsection}{\numberline {5.1.1.11}paskirstytiStudentusS2()}{15}{subsubsection.5.1.1.11}%
-\contentsline {subsubsection}{\numberline {5.1.1.12}paskirstytiStudentusS3()}{15}{subsubsection.5.1.1.12}%
-\contentsline {subsubsection}{\numberline {5.1.1.13}rikiuotiPagalGalutiniMed()}{15}{subsubsection.5.1.1.13}%
-\contentsline {subsubsection}{\numberline {5.1.1.14}rikiuotiPagalGalutiniVid()}{15}{subsubsection.5.1.1.14}%
-\contentsline {subsubsection}{\numberline {5.1.1.15}rikiuotiPavarde()}{16}{subsubsection.5.1.1.15}%
-\contentsline {subsubsection}{\numberline {5.1.1.16}rikiuotiStudentus()}{16}{subsubsection.5.1.1.16}%
-\contentsline {subsubsection}{\numberline {5.1.1.17}rikiuotiVarda()}{16}{subsubsection.5.1.1.17}%
-\contentsline {subsubsection}{\numberline {5.1.1.18}rodytiRez()}{16}{subsubsection.5.1.1.18}%
-\contentsline {subsubsection}{\numberline {5.1.1.19}rodytiRezultatus()}{16}{subsubsection.5.1.1.19}%
-\contentsline {section}{\numberline {5.2}my\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}lib.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{16}{section.5.2}%
-\contentsline {section}{\numberline {5.3}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Studentas.h Failo Nuoroda}{19}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Studentas.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{19}{section.5.4}%
-\contentsline {section}{\numberline {5.5}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Zmogus.h Failo Nuoroda}{21}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Zmogus.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{21}{section.5.6}%
-\contentsline {section}{\numberline {5.7}src/main.cpp Failo Nuoroda}{22}{section.5.7}%
-\contentsline {subsection}{\numberline {5.7.1}Funkcijos Dokumentacija}{22}{subsection.5.7.1}%
-\contentsline {subsubsection}{\numberline {5.7.1.1}main()}{22}{subsubsection.5.7.1.1}%
-\contentsline {section}{\numberline {5.8}src/my\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}lib.cpp Failo Nuoroda}{22}{section.5.8}%
-\contentsline {subsection}{\numberline {5.8.1}Funkcijos Dokumentacija}{23}{subsection.5.8.1}%
-\contentsline {subsubsection}{\numberline {5.8.1.1}atliktiPirmaTyrima()}{23}{subsubsection.5.8.1.1}%
-\contentsline {subsubsection}{\numberline {5.8.1.2}generuotiFaila()}{23}{subsubsection.5.8.1.2}%
-\contentsline {subsubsection}{\numberline {5.8.1.3}generuotiPazymius()}{23}{subsubsection.5.8.1.3}%
-\contentsline {subsubsection}{\numberline {5.8.1.4}generuotiStudentus()}{23}{subsubsection.5.8.1.4}%
-\contentsline {subsubsection}{\numberline {5.8.1.5}isvestiDuFailus()}{23}{subsubsection.5.8.1.5}%
-\contentsline {subsubsection}{\numberline {5.8.1.6}nuskaitytiFailaTestavimui()}{23}{subsubsection.5.8.1.6}%
-\contentsline {subsubsection}{\numberline {5.8.1.7}rikiuotiPagalGalutiniMed()}{23}{subsubsection.5.8.1.7}%
-\contentsline {subsubsection}{\numberline {5.8.1.8}rikiuotiPagalGalutiniVid()}{23}{subsubsection.5.8.1.8}%
-\contentsline {subsubsection}{\numberline {5.8.1.9}rikiuotiPavarde()}{24}{subsubsection.5.8.1.9}%
-\contentsline {subsubsection}{\numberline {5.8.1.10}rikiuotiVarda()}{24}{subsubsection.5.8.1.10}%
-\contentsline {subsubsection}{\numberline {5.8.1.11}rodytiRez()}{24}{subsubsection.5.8.1.11}%
-\contentsline {subsubsection}{\numberline {5.8.1.12}rodytiRezultatus()}{24}{subsubsection.5.8.1.12}%
+\contentsline {subsubsection}{\numberline {4.2.2.4}setVardas()}{13}{subsubsection.4.2.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.2.5}tipas()}{13}{subsubsection.4.2.2.5}%
+\contentsline {subsection}{\numberline {4.2.3}Atributų Dokumentacija}{13}{subsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.3.1}pavarde\_}{13}{subsubsection.4.2.3.1}%
+\contentsline {subsubsection}{\numberline {4.2.3.2}vardas\_}{13}{subsubsection.4.2.3.2}%
+\contentsline {chapter}{\numberline {5}Failo Dokumentacija}{15}{chapter.5}%
+\contentsline {section}{\numberline {5.1}include/my\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}lib.h Failo Nuoroda}{15}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Funkcijos Dokumentacija}{16}{subsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.1.1}atliktiAntraTyrima()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{16}{subsubsection.5.1.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.1.2}atliktiAntraTyrima()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{17}{subsubsection.5.1.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.1.3}atliktiPirmaTyrima()}{17}{subsubsection.5.1.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.1.4}generuotiFaila()}{17}{subsubsection.5.1.1.4}%
+\contentsline {subsubsection}{\numberline {5.1.1.5}generuotiPazymius()}{17}{subsubsection.5.1.1.5}%
+\contentsline {subsubsection}{\numberline {5.1.1.6}generuotiStudentus()}{17}{subsubsection.5.1.1.6}%
+\contentsline {subsubsection}{\numberline {5.1.1.7}isvestiDuFailus()}{17}{subsubsection.5.1.1.7}%
+\contentsline {subsubsection}{\numberline {5.1.1.8}nuskaitytiFaila()}{17}{subsubsection.5.1.1.8}%
+\contentsline {subsubsection}{\numberline {5.1.1.9}nuskaitytiFailaTestavimui()}{17}{subsubsection.5.1.1.9}%
+\contentsline {subsubsection}{\numberline {5.1.1.10}paskirstytiStudentus()}{18}{subsubsection.5.1.1.10}%
+\contentsline {subsubsection}{\numberline {5.1.1.11}paskirstytiStudentusS2()}{18}{subsubsection.5.1.1.11}%
+\contentsline {subsubsection}{\numberline {5.1.1.12}paskirstytiStudentusS3()}{18}{subsubsection.5.1.1.12}%
+\contentsline {subsubsection}{\numberline {5.1.1.13}rikiuotiPagalGalutiniMed()}{18}{subsubsection.5.1.1.13}%
+\contentsline {subsubsection}{\numberline {5.1.1.14}rikiuotiPagalGalutiniVid()}{18}{subsubsection.5.1.1.14}%
+\contentsline {subsubsection}{\numberline {5.1.1.15}rikiuotiPavarde()}{18}{subsubsection.5.1.1.15}%
+\contentsline {subsubsection}{\numberline {5.1.1.16}rikiuotiStudentus()}{18}{subsubsection.5.1.1.16}%
+\contentsline {subsubsection}{\numberline {5.1.1.17}rikiuotiVarda()}{19}{subsubsection.5.1.1.17}%
+\contentsline {subsubsection}{\numberline {5.1.1.18}rodytiRez()}{19}{subsubsection.5.1.1.18}%
+\contentsline {subsubsection}{\numberline {5.1.1.19}rodytiRezultatus()}{19}{subsubsection.5.1.1.19}%
+\contentsline {section}{\numberline {5.2}my\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}lib.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{19}{section.5.2}%
+\contentsline {section}{\numberline {5.3}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Studentas.h Failo Nuoroda}{22}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Studentas.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{23}{section.5.4}%
+\contentsline {section}{\numberline {5.5}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Zmogus.h Failo Nuoroda}{25}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Zmogus.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{25}{section.5.6}%
+\contentsline {section}{\numberline {5.7}src/main.cpp Failo Nuoroda}{26}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Funkcijos Dokumentacija}{26}{subsection.5.7.1}%
+\contentsline {subsubsection}{\numberline {5.7.1.1}main()}{26}{subsubsection.5.7.1.1}%
+\contentsline {section}{\numberline {5.8}src/my\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}lib.cpp Failo Nuoroda}{27}{section.5.8}%
+\contentsline {subsection}{\numberline {5.8.1}Funkcijos Dokumentacija}{27}{subsection.5.8.1}%
+\contentsline {subsubsection}{\numberline {5.8.1.1}atliktiPirmaTyrima()}{27}{subsubsection.5.8.1.1}%
+\contentsline {subsubsection}{\numberline {5.8.1.2}generuotiFaila()}{27}{subsubsection.5.8.1.2}%
+\contentsline {subsubsection}{\numberline {5.8.1.3}generuotiPazymius()}{28}{subsubsection.5.8.1.3}%
+\contentsline {subsubsection}{\numberline {5.8.1.4}generuotiStudentus()}{28}{subsubsection.5.8.1.4}%
+\contentsline {subsubsection}{\numberline {5.8.1.5}isvestiDuFailus()}{28}{subsubsection.5.8.1.5}%
+\contentsline {subsubsection}{\numberline {5.8.1.6}nuskaitytiFailaTestavimui()}{28}{subsubsection.5.8.1.6}%
+\contentsline {subsubsection}{\numberline {5.8.1.7}rikiuotiPagalGalutiniMed()}{28}{subsubsection.5.8.1.7}%
+\contentsline {subsubsection}{\numberline {5.8.1.8}rikiuotiPagalGalutiniVid()}{28}{subsubsection.5.8.1.8}%
+\contentsline {subsubsection}{\numberline {5.8.1.9}rikiuotiPavarde()}{28}{subsubsection.5.8.1.9}%
+\contentsline {subsubsection}{\numberline {5.8.1.10}rikiuotiVarda()}{28}{subsubsection.5.8.1.10}%
+\contentsline {subsubsection}{\numberline {5.8.1.11}rodytiRez()}{29}{subsubsection.5.8.1.11}%
+\contentsline {subsubsection}{\numberline {5.8.1.12}rodytiRezultatus()}{29}{subsubsection.5.8.1.12}%

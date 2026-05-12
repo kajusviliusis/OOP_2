@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.5.5)  5 MAY 2026 22:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.5.5)  12 MAY 2026 21:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -971,35 +971,107 @@ LaTeX Font Info:    Trying to load font information for T1+pcr on input line 5.
 
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
-8.
+) <./classStudentas__inherit__graph.pdf>
+<classStudentas__inherit__graph.pdf, id=59, 145.54375pt x 154.5775pt>
+File: classStudentas__inherit__graph.pdf Graphic file (type pdf)
+<use classStudentas__inherit__graph.pdf>
+Package pdftex.def Info: classStudentas__inherit__graph.pdf  used on input line
+ 14.
+(pdftex.def)             Requested size: 145.0pt x 154.01102pt.
+ <./classStudentas__coll__graph.pdf>
+<classStudentas__coll__graph.pdf, id=67, 145.54375pt x 154.5775pt>
+File: classStudentas__coll__graph.pdf Graphic file (type pdf)
+<use classStudentas__coll__graph.pdf>
+Package pdftex.def Info: classStudentas__coll__graph.pdf  used on input line 24
+.
+(pdftex.def)             Requested size: 145.0pt x 154.01102pt.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 3
+0.
+
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 18.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 58.
+(Font)              scaled to size 8.99994pt on input line 30.
  [7]
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 7.19995pt on input line 96.
+(Font)              scaled to size 10.79993pt on input line 70.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 7.19995pt on input line 108.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.19995pt on input line 97.
+(Font)              scaled to size 7.19995pt on input line 109.
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 103.
- [8] [9])
-(./classZmogus.tex [10] [11]) [12]
-Chapter 5.
-(./my__lib_8h.tex [13
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 115.
+ [8] [9] [10])
+(./classZmogus.tex <./classZmogus__inherit__graph.pdf>
+<classZmogus__inherit__graph.pdf, id=213, 145.54375pt x 154.5775pt>
+File: classZmogus__inherit__graph.pdf Graphic file (type pdf)
+<use classZmogus__inherit__graph.pdf>
+Package pdftex.def Info: classZmogus__inherit__graph.pdf  used on input line 14
+.
+(pdftex.def)             Requested size: 145.0pt x 154.01102pt.
+ [11] [12]) [13] [14
 
 ]
+Chapter 5.
+(./my__lib_8h.tex <./my__lib_8h__incl.pdf>
+<my__lib_8h__incl.pdf, id=274, 1008.76875pt x 264.99pt>
+File: my__lib_8h__incl.pdf Graphic file (type pdf)
+<use my__lib_8h__incl.pdf>
+Package pdftex.def Info: my__lib_8h__incl.pdf  used on input line 21.
+(pdftex.def)             Requested size: 350.0pt x 91.9392pt.
+ <./my__lib_8h__dep__incl.pdf>
+<my__lib_8h__dep__incl.pdf, id=282, 264.99pt x 154.5775pt>
+File: my__lib_8h__dep__incl.pdf Graphic file (type pdf)
+<use my__lib_8h__dep__incl.pdf>
+Package pdftex.def Info: my__lib_8h__dep__incl.pdf  used on input line 29.
+(pdftex.def)             Requested size: 264.0pt x 154.01102pt.
+
+[15] [16]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 87.
- [14] [15]) (./my__lib_8h_source.tex [16] [17] [18])
-(./Studentas_8h.tex) (./Studentas_8h_source.tex [19] [20]) (./Zmogus_8h.tex)
-(./Zmogus_8h_source.tex [21]) (./main_8cpp.tex) (./my__lib_8cpp.tex [22]
-[23]) [24]
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 99.
+ [17] [18]) (./my__lib_8h_source.tex [19] [20] [21])
+(./Studentas_8h.tex <./Studentas_8h__incl.pdf>
+<Studentas_8h__incl.pdf, id=481, 486.81876pt x 209.78375pt>
+File: Studentas_8h__incl.pdf Graphic file (type pdf)
+<use Studentas_8h__incl.pdf>
+Package pdftex.def Info: Studentas_8h__incl.pdf  used on input line 14.
+(pdftex.def)             Requested size: 350.0pt x 150.82329pt.
+ <./Studentas_8h__dep__incl.pdf>
+<Studentas_8h__dep__incl.pdf, id=489, 264.99pt x 209.78375pt>
+File: Studentas_8h__dep__incl.pdf Graphic file (type pdf)
+<use Studentas_8h__dep__incl.pdf>
+Package pdftex.def Info: Studentas_8h__dep__incl.pdf  used on input line 22.
+(pdftex.def)             Requested size: 264.0pt x 209.01497pt.
+
+[22]) (./Studentas_8h_source.tex [23]) (./Zmogus_8h.tex <./Zmogus_8h__incl.pdf>
+<Zmogus_8h__incl.pdf, id=570, 184.69pt x 154.5775pt>
+File: Zmogus_8h__incl.pdf Graphic file (type pdf)
+<use Zmogus_8h__incl.pdf>
+Package pdftex.def Info: Zmogus_8h__incl.pdf  used on input line 9.
+(pdftex.def)             Requested size: 184.0pt x 154.00159pt.
+[24] <./Zmogus_8h__dep__incl.pdf>
+<Zmogus_8h__dep__incl.pdf, id=583, 264.99pt x 264.99pt>
+File: Zmogus_8h__dep__incl.pdf Graphic file (type pdf)
+<use Zmogus_8h__dep__incl.pdf>
+Package pdftex.def Info: Zmogus_8h__dep__incl.pdf  used on input line 17.
+(pdftex.def)             Requested size: 264.0pt x 264.01892pt.
+) (./Zmogus_8h_source.tex [25])
+(./main_8cpp.tex <./main_8cpp__incl.pdf>
+<main_8cpp__incl.pdf, id=625, 1065.9825pt x 320.19624pt>
+File: main_8cpp__incl.pdf Graphic file (type pdf)
+<use main_8cpp__incl.pdf>
+Package pdftex.def Info: main_8cpp__incl.pdf  used on input line 15.
+(pdftex.def)             Requested size: 350.0pt x 105.13252pt.
+) (./my__lib_8cpp.tex <./my__lib_8cpp__incl.pdf>
+<my__lib_8cpp__incl.pdf, id=634, 1002.74625pt x 320.19624pt>
+File: my__lib_8cpp__incl.pdf Graphic file (type pdf)
+<use my__lib_8cpp__incl.pdf>
+Package pdftex.def Info: my__lib_8cpp__incl.pdf  used on input line 17.
+(pdftex.def)             Requested size: 350.0pt x 111.76254pt.
+ [26] [27]) [28] [29] [30
+
+]
 No file refman.ind.
 (./refman.aux)
  ***********
@@ -1023,13 +1095,13 @@ Package rerunfilecheck Info: Checksums for `refman.out':
 (rerunfilecheck)             After:  B794A0666D82C197A3CC856877D7A5DB;18295.
  ) 
 Here is how much of TeX's memory you used:
- 19235 strings out of 476182
- 313435 string characters out of 5795596
- 1940975 words of memory out of 5000000
- 40684 multiletter control sequences out of 15000+600000
+ 19358 strings out of 476182
+ 317097 string characters out of 5795596
+ 1942975 words of memory out of 5000000
+ 40789 multiletter control sequences out of 15000+600000
  601787 words of font info for 98 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 101i,16n,117p,392b,583s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,16n,117p,392b,579s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texli
@@ -1039,10 +1111,10 @@ fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
 rw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/uc
 rro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on refman.pdf (26 pages, 146883 bytes).
+Output written on refman.pdf (32 pages, 225671 bytes).
 PDF statistics:
- 694 PDF objects out of 1000 (max. 8388607)
- 639 compressed objects within 7 object streams
- 202 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 835 PDF objects out of 1000 (max. 8388607)
+ 733 compressed objects within 8 object streams
+ 220 named destinations out of 1000 (max. 500000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
